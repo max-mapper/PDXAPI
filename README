@@ -1,0 +1,1 @@
+This is a simple ruby sinatra app that reads GPS data from a Redis database using the Proximity class and gives returns a JSONP string containing the query results

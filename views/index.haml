@@ -1,0 +1,19 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", :"xml:lang" =>"en", :lang =>"en"}
+  %head
+    %title= "PDXAPI"
+    %link{:rel => "stylesheet", :type => "text/css", :href => "style.css"}
+  %body
+    %h1.awesome= "PDXAPI"
+    %p
+      example: 
+      %a{:href => 'http://www.pdxapi.com/locks?lat=45.5234515&lon=-122.6762071&count=5'}
+        http://www.pdxapi.com/locks?lat=45.5234515&lon=-122.6762071&count=5
+    %p
+      this returns a jsonp array containing the 5 nearest bike loc locations to the given lat/lon parameters
+    %p
+      more datasets and examples coming soon
+    %p
+      contact: 
+      %a{:href => 'http://www.maxogden.com'}
+        max ogden
