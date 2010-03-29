@@ -1,0 +1,721 @@
+--- 
+- city: ""
+  address: 40595 SE GEORGE RD
+  station: "115"
+  latitude: "45.2985654640307231"
+  district: "ESTACADA RFD #69"
+  longitude: "-122.2444753172807737"
+- city: SANDY
+  address: 17460 BRUNS AVE
+  station: "71"
+  latitude: "45.3966323159230356"
+  district: "SANDY RFPD #72"
+  longitude: "-122.2638243495955095"
+- city: ""
+  address: 24479 S ELWOOD RD
+  station: "123"
+  latitude: "45.2052914379525390"
+  district: "COLTON RFPD #70"
+  longitude: "-122.3625476139564086"
+- city: ""
+  address: 18081 S HARDING RD
+  station: "12"
+  latitude: "45.3442831459543356"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.4236006259347675"
+- city: HAPPY VALLEY
+  address: 12900 SE KING RD
+  station: "6"
+  latitude: "45.4473700089834907"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5306170728415083"
+- city: MILWAUKIE
+  address: 3200 SE HARRISON ST
+  station: "2"
+  latitude: "45.4463831793472224"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.6289924214032254"
+- city: MULINO
+  address: 27689 HIGHWAY 213
+  station: "81"
+  latitude: "45.2062246404375117"
+  district: "MOLALLA RFPD #73"
+  longitude: "-122.5820524039168902"
+- city: GLADSTONE
+  address: 535 PORTLAND AVE
+  station: "103"
+  latitude: "45.3807061248784294"
+  district: GLADSTONE FD
+  longitude: "-122.5944220895757582"
+- city: WEST LINN
+  address: 6050 FAILING ST
+  station: "58"
+  latitude: "45.3707301729764296"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.6222629327412648"
+- city: WILSONVILLE
+  address: 29875 SW KINSMAN RD
+  station: "52"
+  latitude: "45.3041062061977584"
+  district: TV FIRE & RESCUE
+  longitude: "-122.7787312759923708"
+- city: BEAVERTON
+  address: 13810 SW FARMINGTON RD
+  station: "67"
+  latitude: "45.4863871049291575"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8190702539648811"
+- city: HAPPY VALLEY
+  address: 10921 SE 172ND AVE
+  station: "7"
+  latitude: "45.4433833677791981"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.4864511603815060"
+- city: GOVERNMENT CAMP
+  address: 87600 E GOVERNMENT CAMP LOOP
+  station: "253"
+  latitude: "45.3058317366278018"
+  district: "HOODLAND RFPD #74"
+  longitude: "-121.7601899272756469"
+- city: PORTLAND
+  address: 7205 N ALTA AVE
+  station: "22"
+  latitude: "45.5901260265405455"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.7567654136688446"
+- city: ""
+  address: 1000 FIRE STATION LN
+  station: "358"
+  latitude: "45.3824302845559728"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.6652578387210468"
+- city: HILLSBORO
+  address: 275 NE 25TH AVE
+  station: "104"
+  latitude: "45.5237933341418923"
+  district: HILLSBORO FIRE DEPT
+  longitude: "-122.9567962441792588"
+- city: PORTLAND
+  address: 5540 NE SANDY BLVD
+  station: "28"
+  latitude: "45.5415129454358052"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6057793446382789"
+- city: ""
+  address: 32101 S KROPF RD
+  station: "990"
+  latitude: "45.1419221168144063"
+  district: "MONITOR FD #58"
+  longitude: "-122.6818647089139347"
+- city: PORTLAND
+  address: 11646 NW SKYLINE BLVD
+  station: "368"
+  latitude: "45.6086091186396061"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8601369372398722"
+- city: TIMBER
+  address: 60900 NW COCHRAN RD
+  station: "15"
+  latitude: "45.7158515975809649"
+  district: "BANKS FIRE DISTRICT #13"
+  longitude: "-123.3008624681830128"
+- city: NORTH PLAINS
+  address: 31370 NW COMMERCIAL ST
+  station: "17"
+  latitude: "45.5975024907894024"
+  district: "WASHINGTON CO FD #2"
+  longitude: "-123.0002133356701535"
+- city: TIGARD
+  address: 12617 SW WALNUT ST
+  station: "50"
+  latitude: "45.4282268262082241"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8061242370443154"
+- city: PORTLAND
+  address: 4800 NE 122ND AVE
+  station: "2"
+  latitude: "45.5576826199591522"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5365895360530430"
+- city: PORTLAND
+  address: 1715 NW JOHNSON ST
+  station: "3"
+  latitude: "45.5288026370263665"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6886568442531882"
+- city: PORTLAND
+  address: 511 SW COLLEGE ST
+  station: "4"
+  latitude: "45.5098044229231462"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6829005311999765"
+- city: PORTLAND
+  address: 1505 SW DEWITT ST
+  station: "5"
+  latitude: "45.4804040159273200"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6932084595326131"
+- city: PORTLAND
+  address: 3660 NW FRONT AVE
+  station: "6"
+  latitude: "45.5488742109342581"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.7059339187854334"
+- city: PORTLAND
+  address: 7134 N MARYLAND AVE
+  station: "8"
+  latitude: "45.5749441451895052"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6805257952241845"
+- city: PORTLAND
+  address: 5707 SE 92ND AVE
+  station: "11"
+  latitude: "45.4811463738270874"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5688751228010034"
+- city: PORTLAND
+  address: 926 NE WEIDLER ST
+  station: "13"
+  latitude: "45.5341299403946635"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6558176900345529"
+- city: PORTLAND
+  address: 1905 NE KILLINGSWORTH ST
+  station: "14"
+  latitude: "45.5630365829041324"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6456671638678415"
+- city: PORTLAND
+  address: 1920 SW SPRING ST
+  station: "15"
+  latitude: "45.5089969969854309"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6987397261877533"
+- city: PORTLAND
+  address: 848 N TOMAHAWK ISLAND DR
+  station: "17"
+  latitude: "45.6097201228833669"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6757671705441197"
+- city: PORTLAND
+  address: 7301 E BURNSIDE ST
+  station: "19"
+  latitude: "45.5231783175816105"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5874550794287785"
+- city: PORTLAND
+  address: 2235 SE BYBEE BLVD
+  station: "20"
+  latitude: "45.4743158016411826"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6420052531405247"
+- city: PORTLAND
+  address: 2915 SE 13TH PL
+  station: "23"
+  latitude: "45.5018779383917860"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6524125304920432"
+- city: PORTLAND
+  address: 4515 N MARYLAND AVE
+  station: "24"
+  latitude: "45.5557718966084764"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6813844098591346"
+- city: PORTLAND
+  address: 5211 SE MALL ST
+  station: "25"
+  latitude: "45.4915474198519121"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6085473311397749"
+- city: PORTLAND
+  address: 1500 SE 122ND AVE
+  station: "7"
+  latitude: "45.5126758189418652"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5370261274299537"
+- city: PORTLAND
+  address: 13310 SE FOSTER RD
+  station: "29"
+  latitude: "45.4764978050024311"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5263893347423476"
+- city: PORTLAND
+  address: 13313 NE SAN RAFAEL ST
+  station: "30"
+  latitude: "45.5374446916632323"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5258537152793679"
+- city: PORTLAND
+  address: 1927 SE 174TH AVE
+  station: "31"
+  latitude: "45.5086672671361114"
+  district: PORTLAND/GRESHAM - SHARED
+  longitude: "-122.4850449834563193"
+- city: GRESHAM
+  address: 7144 SE 302ND AVE
+  station: "76"
+  latitude: "45.4708535593541825"
+  district: GRESHAM FIRE & EMERG SRVCS
+  longitude: "-122.3520545988328507"
+- city: GRESHAM
+  address: 1333 NW EASTMAN PKWY
+  station: "71"
+  latitude: "45.5074957847723596"
+  district: GRESHAM FIRE & EMERG SRVCS
+  longitude: "-122.4373668699196998"
+- city: GRESHAM
+  address: 500 NE KANE DR
+  station: "72"
+  latitude: "45.5017429697845799"
+  district: GRESHAM FIRE & EMERG SRVCS
+  longitude: "-122.3993937604504794"
+- city: GRESHAM
+  address: 2301 SW PLEASANT VIEW DR
+  station: "73"
+  latitude: "45.4797124251112947"
+  district: GRESHAM FIRE & EMERG SRVCS
+  longitude: "-122.4680496767564222"
+- city: GRESHAM
+  address: 1520 NE 192ND AVE
+  station: "74"
+  latitude: "45.5340387013877006"
+  district: GRESHAM FIRE & EMERG SRVCS
+  longitude: "-122.4656819735039051"
+- city: TROUTDALE
+  address: 600 SW CHERRY PARK RD
+  station: "75"
+  latitude: "45.5334514913223316"
+  district: GRESHAM FIRE & EMERG SRVCS
+  longitude: "-122.3936273961150505"
+- city: TIGARD
+  address: 8935 SW BURNHAM ST
+  station: "51"
+  latitude: "45.4278610043337920"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7682254876812493"
+- city: WILSONVILLE
+  address: 8455 SW ELLIGSEN RD
+  station: "56"
+  latitude: "45.3360879405158244"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7637251242014145"
+- city: PORTLAND
+  address: 8661 SW CANYON DR
+  station: "65"
+  latitude: "45.4989704782106301"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7660202978359507"
+- city: ALOHA
+  address: 3608 SW 209TH AVE
+  station: "62"
+  latitude: "45.4933436317668836"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8911916553677912"
+- city: BEAVERTON
+  address: 8480 SW SCHOLLS FERRY RD
+  station: "53"
+  latitude: "45.4586988339273859"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7809264810912282"
+- city: BEAVERTON
+  address: 13730 SW BUTNER ROAD
+  station: "61"
+  latitude: "45.5140081135074510"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8185815592622987"
+- city: PORTLAND
+  address: 3355 NW 185TH AVE
+  station: "64"
+  latitude: "45.5430851288117537"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8683474205815571"
+- city: ALOHA
+  address: 9940 SW 175TH AVE
+  station: "69"
+  latitude: "45.4483387580767726"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8562579093619576"
+- city: PORTLAND
+  address: 3260 NW 147TH PL
+  station: "68"
+  latitude: "45.5433791314687397"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8284665749138185"
+- city: BEAVERTON
+  address: 13900 SW BROCKMAN RD
+  station: "66"
+  latitude: "45.4545149917495692"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8203801177331940"
+- city: SHERWOOD
+  address: 655 NE OREGON ST
+  station: "33"
+  latitude: "45.3587154609748779"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8355883403541924"
+- city: FOREST GROVE
+  address: 1919 ASH ST
+  station: "4"
+  latitude: "45.5187354744359567"
+  district: FOREST GROVE FIRE & RESCUE
+  longitude: "-123.1095636333666050"
+- city: GASTON
+  address: 102 E MAIN ST
+  station: "11"
+  latitude: "45.4368732972949090"
+  district: GASTON RFPD
+  longitude: "-123.1385895109038131"
+- city: MIDWAY
+  address: 16000 SW MIDWAY
+  station: "19"
+  latitude: "45.4030882770902835"
+  district: "WASHINGTON CO FD #2"
+  longitude: "-122.9596339867435830"
+- city: BUXTON
+  address: 22870 NW FISHER RD
+  station: "14"
+  latitude: "45.6883327301361746"
+  district: "BANKS FIRE DISTRICT #13"
+  longitude: "-123.1905794625145489"
+- city: GALES CREEK
+  address: 52155 NW OLD WILSON RIVER RD
+  station: "7"
+  latitude: "45.5861927464377104"
+  district: FOREST GROVE FIRE & RESCUE
+  longitude: "-123.2155842981205751"
+- city: SPRINGDALE
+  address: 31727 E COLUMBIA RIVER HWY
+  station: "61"
+  latitude: "45.5191441856690702"
+  district: MULTNOMAH CO RFPD 14
+  longitude: "-122.3360228345106435"
+- city: CORBETT
+  address: 36930 E COLUMBIA RIVER HWY
+  station: "62"
+  latitude: "45.5316461017784277"
+  district: MULTNOMAH CO RFPD 14
+  longitude: "-122.2838865365840775"
+- city: AIMS
+  address: 40750 SE GORDON CREEK RD
+  station: "63"
+  latitude: "45.4694772233863631"
+  district: MULTNOMAH CO RFPD 14
+  longitude: "-122.2443905691822010"
+- city: PORTLAND
+  address: 55 SW ASH ST
+  station: "1"
+  latitude: "45.5218226250356537"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6706454948348579"
+- city: PORTLAND
+  address: 451 SW TAYLORS FERRY RD
+  station: "10"
+  latitude: "45.4634730295516292"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6831759325042697"
+- city: HOLBROOK
+  address: 19260 NW CLEETWOOD AVE
+  station: "436"
+  latitude: "45.6673656781812340"
+  district: SCAPPOOSE RFPD
+  longitude: "-122.8757408929125461"
+- city: PORTLAND
+  address: 8585 NW JOHNSON ST
+  station: "60"
+  latitude: "45.5291851021255596"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7655106641525862"
+- city: SHERWOOD
+  address: 12400 SW TONQUIN RD
+  station: TSC
+  latitude: "45.3447904899808591"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.8049914764751378"
+- city: PORTLAND
+  address: 5250 NE MARINE DR
+  station: "89"
+  latitude: "45.5971196660312970"
+  district: "MULT CO FD #8 PDX (PORT OF PORTLAND)"
+  longitude: "-122.6069371635566938"
+- city: TUALATIN
+  address: 19365 SW 90TH CT
+  station: "34"
+  latitude: "45.3796889751052390"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7707892023364877"
+- city: ""
+  address: 17135 SW PACIFIC HWY
+  station: "35"
+  latitude: "45.3960071281445039"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7999486726458542"
+- city: WELCHES
+  address: 69634 E HIGHWAY 26
+  station: "251"
+  latitude: "45.3442364072093227"
+  district: "HOODLAND RFPD #74"
+  longitude: "-121.9469341542186385"
+- city: BRIGHTWOOD
+  address: 61388 E HIGHWAY 26
+  station: "252"
+  latitude: "45.3745409660957222"
+  district: "HOODLAND RFPD #74"
+  longitude: "-122.0325545238449507"
+- city: ESTACADA
+  address: 261 SE 5TH ST
+  station: "110"
+  latitude: "45.2859977764563624"
+  district: "ESTACADA RFD #69"
+  longitude: "-122.3331898985076265"
+- city: COLTON
+  address: 20987 S HIGHWAY 211
+  station: "129"
+  latitude: "45.1722829760769216"
+  district: "COLTON RFPD #70"
+  longitude: "-122.4345994961399953"
+- city: ""
+  address: 25675 S BEAVERCREEK RD
+  station: "13"
+  latitude: "45.2339389626715374"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.4757281994206437"
+- city: BEAVERCREEK
+  address: 22295 S LOWER HIGHLAND RD
+  station: "14"
+  latitude: "45.2483854151152372"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.4089217918198074"
+- city: EAGLE CREEK
+  address: 32200 SE JUDD RD
+  station: "148"
+  latitude: "45.3681176577613954"
+  district: "BORING FIRE DISTRICT #59"
+  longitude: "-122.3314901993023511"
+- city: BORING
+  address: 28655 SE HIGHWAY 212
+  station: "140"
+  latitude: "45.4326229902959113"
+  district: "BORING FIRE DISTRICT #59"
+  longitude: "-122.3682681427878123"
+- city: DAMASCUS
+  address: 20100 SE HIGHWAY 212
+  station: "149"
+  latitude: "45.4171536882399707"
+  district: "BORING FIRE DISTRICT #59"
+  longitude: "-122.4556380011711809"
+- city: ""
+  address: 11300 SE FULLER RD
+  station: "1"
+  latitude: "45.4404969055089225"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5818767299055452"
+- city: ""
+  address: 6600 SE LAKE RD
+  station: "4"
+  latitude: "45.4257736459881798"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5956315983799243"
+- city: CANBY
+  address: 221 S PINE ST
+  station: "62"
+  latitude: "45.2645743800786988"
+  district: "CANBY RFPD #62"
+  longitude: "-122.6826208863976717"
+- city: MOLALLA
+  address: 320 N MOLALLA AVE
+  station: "82"
+  latitude: "45.1503862358168959"
+  district: "MOLALLA RFPD #73"
+  longitude: "-122.5771857703624050"
+- city: ""
+  address: 26815 HIGHWAY 170
+  station: "65"
+  latitude: "45.2187608713132434"
+  district: "CANBY RFPD #62"
+  longitude: "-122.6793958891094292"
+- city: REDLAND
+  address: 18265 S REDLAND RD
+  station: "11"
+  latitude: "45.3428683648687354"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.4902909694493189"
+- city: ""
+  address: 2930 SE OAK GROVE BLVD
+  station: "3"
+  latitude: "45.4154629736098840"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.6330476856749385"
+- city: OREGON CITY
+  address: 19340 MOLALLA AVE
+  station: "16"
+  latitude: "45.3268474288330623"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5818567742781369"
+- city: OREGON CITY
+  address: 624 7TH ST
+  station: "15"
+  latitude: "45.3557884165537359"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.6045655475508056"
+- city: OREGON CITY
+  address: 300 LONGVIEW WAY
+  station: "9"
+  latitude: "45.3730803296172596"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5684299829102031"
+- city: LAKE OSWEGO
+  address: 4900 MELROSE ST
+  station: "210"
+  latitude: "45.4258236191586136"
+  district: LAKE OSWEGO F&R&LIFE SAFETY
+  longitude: "-122.7249508171068726"
+- city: LAKE OSWEGO
+  address: 4555 JEAN RD
+  station: "211"
+  latitude: "45.3971974399169653"
+  district: LAKE OSWEGO F&R&LIFE SAFETY
+  longitude: "-122.7234265020252053"
+- city: ""
+  address: 24242 SW MOUNTAIN RD
+  station: "57"
+  latitude: "45.3445992002069360"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.7080330666409793"
+- city: LAKE OSWEGO
+  address: 1880 SOUTH SHORE BLVD
+  station: "212"
+  latitude: "45.4065178368772564"
+  district: LAKE OSWEGO F&R&LIFE SAFETY
+  longitude: "-122.6814147600854170"
+- city: WEST LINN
+  address: 2215 LONG ST
+  station: "359"
+  latitude: "45.3593489377176695"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.6251392039118144"
+- city: WEST LINN
+  address: 1860 WILLAMETTE FALLS DR
+  station: "59"
+  latitude: "45.3445988283238108"
+  district: TUALATIN VALLEY FIRE & RESCUE
+  longitude: "-122.6550289487283294"
+- city: LAKE OSWEGO
+  address: 300 B AVE
+  station: "214"
+  latitude: "45.4207985869576447"
+  district: LAKE OSWEGO F&R&LIFE SAFETY
+  longitude: "-122.6667717071385084"
+- city: CLACKAMAS
+  address: 16100 SE 130TH AVE
+  station: "8"
+  latitude: "45.4057197498310714"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5298180799428138"
+- city: ""
+  address: 9339 SE CAUSEY AVE
+  station: "5"
+  latitude: "45.4417603637524223"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5670328415849042"
+- city: ""
+  address: 13120 SE TEN EYCK RD
+  station: "76"
+  latitude: "45.4296283039514535"
+  district: "SANDY RFPD #72"
+  longitude: "-122.2399584410523232"
+- city: ""
+  address: 24545 SE FIRWOOD RD
+  station: "75"
+  latitude: "45.3457586516755953"
+  district: "SANDY RFPD #72"
+  longitude: "-122.2357022434673723"
+- city: ""
+  address: 36715 S SAWTELL RD
+  station: "85"
+  latitude: "45.0744253818113023"
+  district: "MOLALLA RFPD #73"
+  longitude: "-122.5551113264481273"
+- city: PORTLAND
+  address: 18342 NW SAUVIE ISLAND RD
+  station: "30"
+  latitude: "45.6565618431905520"
+  district: "SAUVIE ISLAND VOL FD #30"
+  longitude: "-122.8346414409500937"
+- city: PORTLAND
+  address: 8720 SW 30TH AVE
+  station: "18"
+  latitude: "45.4621088970530849"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.7072841811245212"
+- city: PORTLAND
+  address: 5247 N LOMBARD ST
+  station: "26"
+  latitude: "45.5823208309944548"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.7225617103125188"
+- city: PORTLAND
+  address: 8645 NE SANDY BLVD
+  station: "12"
+  latitude: "45.5546537010094781"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.5738983212094411"
+- city: PORTLAND
+  address: 1715 SW SKYLINE BLVD
+  station: "16"
+  latitude: "45.5108422635666656"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.7358657200574186"
+- city: PORTLAND
+  address: 1706 SE 39TH AVE
+  station: "9"
+  latitude: "45.5106314723803180"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.6223654318482517"
+- city: OREGON CITY
+  address: 19001 SOUTH END RD
+  station: "17"
+  latitude: "45.3323349228825307"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.6254781532178129"
+- city: HILLSBORO
+  address: 4455 NW 229TH AVE
+  station: "3"
+  latitude: "45.5511975295395359"
+  district: HILLSBORO FIRE DEPT
+  longitude: "-122.9099680890090553"
+- city: HILLSBORO
+  address: 240 S 1ST AVE
+  station: "1"
+  latitude: "45.5207371495948863"
+  district: HILLSBORO FIRE DEPT
+  longitude: "-122.9894009417081548"
+- city: HILLSBORO
+  address: 5045 SE DRAKE ST
+  station: "2"
+  latitude: "45.5030607873131885"
+  district: HILLSBORO FIRE DEPT
+  longitude: "-122.9305693575263234"
+- city: CORNELIUS
+  address: 1311 N BARLOW ST
+  station: "8"
+  latitude: "45.5216138607369558"
+  district: CORNELIUS FIRE DEPT
+  longitude: "-123.0555101868429375"
+- city: PORTLAND
+  address: 3130 NW SKYLINE BLVD
+  station: "27"
+  latitude: "45.5449176473831585"
+  district: PORTLAND FIRE & RESCUE
+  longitude: "-122.7599918918759414"
+- city: BEAVERCREEK
+  address: 22310 S BEAVERCREEK RD
+  station: "10"
+  latitude: "45.2841939605829467"
+  district: "CLACKAMAS CO. DISTRICT #1"
+  longitude: "-122.5168281882228740"
+- city: BANKS
+  address: 300 S MAIN ST
+  station: "13"
+  latitude: "45.6174604856656600"
+  district: "BANKS FIRE DISTRICT #13"
+  longitude: "-123.1139485858112437"

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDX API</title>
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAUXDSXET8IRGdgHP9FpGw5BT-fVzUWGS_eJ2ZLPBO_6yPqTi0vhQKAzahOrduDq0xQk09GR-UP3Jgcg"></script>
+  <script type="text/javascript">
+    google.load("jquery", '1.3');
+    google.load("maps", "2.x");
+  </script>
+  <script type="text/javascript" charset="utf-8" src="pdxapi.js"></script>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <div id="map"></div>
+    <div id="crosshair"></div>
+    <tr>
+      <th class=docs><h1>PDX API</h1></th>
+      <td class=code>
+        <code><i>Drag the map to view the 10 bike racks closest to the crosshair.</i></code>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="octowrap">
+          <a class="octothorpe" href="#section-1">#</a>
+        </div>
+        <p> <strong>PDXAPI</strong> is a JSON API that provides access to data from <a         href="http://www.civicapps.org">CivicApps</a>,
+         the open data initiative by the City of Portland.</p>
+        <p> Much of the data on CivicApps is in a very raw and hard to use form.
+         PDX API exists to filter the data from CivicApps and provide it in the
+         easiest way possible to application developers wanting to consume the data.</p>
+        <p> Currently the API supports a basic geolocation based query on a small
+         number of datasets. As more data sets get imported from CivicApps,
+         the API will become more useful.</p>
+      </td>
+      <td class=code>
+        <h3>Example</h3>
+        <p> <strong>JQuery</strong> JSONP request to the <code>bikeracks</code> resource (bicycle lock rack locations):</p>
+        <div class='highlight'><pre>
+        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+          <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://www.pdxapi.com/bikeracks&quot;</span><span class="o">,</span>
+          <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="o">,</span>
+          <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.5234515</span><span class="o">,</span>
+            <span class="s2">&quot;lon&quot;</span><span class="o">:-</span><span class="mf">122.6762071</span><span class="o">,</span>
+            <span class="s2">&quot;count&quot;</span><span class="o">:</span><span class="mi">2</span>
+          <span class="p">}</span><span class="o">,</span>
+          <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+            <span class="c">// manipulate data</span>
+          <span class="p">}</span>
+        <span class="p">});</span>
+        </pre></div>
+      </td>
+    </tr>
+    <tr id='section-2'>
+      <td class=docs>
+        <div class="octowrap">
+          <a class="octothorpe" href="#section-2">#</a>
+        <h3>API</h3>
+        <p> <strong>pdxapi.com/</strong><code>resource</code><strong>?</strong><code>lat</code><strong>=latitude&amp;</strong><code>lon</code><strong>=longitude</strong></p>
+        <p> You must specify the <code>resource</code> (dataset) and supply a <code>lat</code>/<code>lon</code> pair.
+         The <code>lat</code>/<code>lon</code> pair represents the point in space that you are querying.</p>
+        <p> You may include an optional <code>count</code> parameter to specify the number
+         of results you want to be returned from the resource.</p>
+        <p> You&rsquo;ll need to request the data using library that supports <a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a>,
+         such as <a href="http://api.jquery.com/jQuery.getJSON/">jQuery</a>.</p>
+         </div>
+      </td>
+      <td class=code>
+        <p> The JSON data that gets returned looks like this:</p>
+        <div class="highlight">
+        <pre>
+          <span class="p">[</span>
+           <span class="p">{</span><span class="s2">&quot;distance&quot;</span><span class="o">:</span><span class="mf">35.054530</span><span class="o">,</span><span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.523392</span><span class="o">,</span><span class="s2">&quot;lon&quot;</span><span class="o">:</span><span class="mf">-122.676315</span><span class="p">}</span><span class="o">,</span>
+           <span class="p">{</span><span class="s2">&quot;distance&quot;</span><span class="o">:</span><span class="mf">130.21258</span><span class="o">,</span><span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.523720</span><span class="o">,</span><span class="s2">&quot;lon&quot;</span><span class="o">:</span><span class="mf">-122.676545</span><span class="p">}</span>
+          <span class="p">]</span>
+        </pre>
+        </div>
+        <p> The <code>distance</code> attribute is the distance in feet from the queried 
+          <code>lat</code>/<code>lon</code> pair to the respective result.</p>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="octowrap">
+          <a class="octothorpe" href="#section-3">#</a>
+          <h3>Contribute</h3>
+          <p> Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
+           or <a href="http://www.maxogden.com">contact me</a> if you are interested in helping out.</p>
+          </div>
+          
+        </div>
+      </td>
+      <td class=code>
+        <h3>Datasets</h3>
+        <p> Datasets currently available through PDX API:</p>
+        <p> <code>bikeracks</code> (bike lock racks)</p>
+        <p> More to come soon!</p>
+      </td>
+    </tr>
+    </table>
+</div>
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-15477568-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+</body>

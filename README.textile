@@ -1,0 +1,68 @@
+<h1>PDX API</h1> JSONP API for Portland, OR civic data
+
+h2. Using the API
+
+p. See "pdxapi.com":http://pdxapi.com for more information and example usage
+
+h2. Where does the data come from?
+
+p. Currently the data is being adapted from datasets released on "CivicApps":http://www.civicapps.org.
+
+h2. Project Goals
+
+# create an easily consumable data resource for developers interested in utilizing portland civic data
+# create automated processes for synchronizing pdxapi with the original data sources (City of Portland, Metro, TriMet)
+# create tools and examples for developers to use as a jumping off point for creating 'civic apps'
+# make datasets easy to browse and/or preview for non technical users
+
+h2. Contributing
+
+p. Inside the @data@ directory you will find all of the converted datasets from CivicApps. An easy way to help out is to find a pointfile (more shapefile datatypes will be supported soon!) dataset on CivicApps not yet imported into PDXAPI and format the data in a way similar to the data found in @data@. The key ingredient for spatial datasets is that the coordinates be representing using latitude/longitude. You can use the shp2yaml utility to convert a shapefile directory into a YAML file.
+
+p. To run the API server locally, you will need @ruby@ and @rubygems@ installed, as well as the following gems:
+<pre>
+  <code>
+    sinatra json haml rspec redis
+  </code>
+</pre>
+
+p. You will also need to install @redis@, which is used to store and query the map data. Once installed, start a redis instance by executing @redis-server@
+
+p. Populate redis with all of the data from the @data@ directory:
+<pre>
+  <code>
+    ruby lib/redisloader.rb
+  </code>
+</pre>
+
+h2. To-do
+
+# support for polyline/polygon/other shapefile formats
+# import 100% of datasets from civic apps
+# optimize query speed
+# iphone/android example mashup app source code using Titanium
+
+h2. License
+
+(The MIT License)
+
+Copyright (c) 2010 Max Ogden
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
