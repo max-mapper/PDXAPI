@@ -1,7 +1,7 @@
 $(document).ready(function(){
   function getBikeRacks(lat, lon, count) {
     $.ajax({
-      url: "http://www.pdxapi.com/parking_meters",
+      url: "http://www.pdxapi.com/bike_racks",
       dataType: 'jsonp',
       data: {
         "lat":lat,

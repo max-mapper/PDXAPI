@@ -9,7 +9,23 @@
   </script>
   <script type="text/javascript" charset="utf-8" src="pdxapi.js"></script>
   <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
-  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    #map {
+      width: 100%;
+      height: 300px; }
+
+    #crosshair {
+      position: absolute;
+      top: 140px;
+      height: 19px;
+      width: 19px;
+      left: 50%;
+      margin-left: -8px;
+      display: block;
+      background: url(crosshair.gif);
+      background-position: center center;
+      background-repeat: no-repeat; }
+  </style>
 </head>
 <body>
 <div id='container'>
@@ -42,10 +58,10 @@
       </td>
       <td class=code>
         <h3>Example</h3>
-        <p> <strong>JQuery</strong> JSONP request to the <code>bikeracks</code> resource (bicycle lock rack locations):</p>
+        <p> <strong>JQuery</strong> JSONP request to the <code>bike_racks</code> resource (bicycle lock rack locations):</p>
         <div class='highlight'><pre>
         <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-          <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://www.pdxapi.com/bikeracks&quot;</span><span class="o">,</span>
+          <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://www.pdxapi.com/bike_racks&quot;</span><span class="o">,</span>
           <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="o">,</span>
           <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.5234515</span><span class="o">,</span>
@@ -101,7 +117,8 @@
       <td class=code>
         <h3>Datasets</h3>
         <p> Datasets currently available through PDX API:</p>
-        <p> <code>bikeracks</code> (bike lock racks)</p>
+        <p> <code>bike_racks</code> <code>heritage_trees</code> <code>libraries</code> <code>schools</code> <code>fire_stations</code> <code>hospitals</code> <code>parking_meters</code>
+        </p>
         <p> More to come soon!</p>
       </td>
     </tr>
