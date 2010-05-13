@@ -7,6 +7,7 @@ require 'pow'
 redis = Redis.new
 
 Pow("../data").files.each do |file|
+  next unless file.extension =~ /yml/
   data = YAML.load_file(file.path)
   resource = file.name(false) # false = without file extension
   data.each do |object|
