@@ -1,44 +1,32 @@
 <h1>PDX API</h1> JSONP API for Portland, OR civic data
 
+h2. About
+
+PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org. There are utilities included to convert legacy GIS data such as Shapefiles and load them into CouchDB. Out of the box CouchDB provides a RESTy JSONP API to all of the data.
+
 h2. Using the API
 
-p. See "pdxapi.com":http://pdxapi.com for more information and example usage
-
-h2. Where does the data come from?
-
-p. Currently the data is being adapted from datasets released on "CivicApps":http://www.civicapps.org.
+p. See "pdxapi.com":http://pdxapi.com for more information and example usage.
 
 h2. Project Goals
 
 * create an easily consumable data resource for developers interested in utilizing portland civic data
+* modify and build upon the city's publicly released data by allowing users to edit and contribute data, and even start whole new datasets
 * create automated processes for synchronizing pdxapi with the original data sources (City of Portland, Metro, TriMet)
 * create tools and examples for developers to use as a jumping off point for creating 'civic apps'
-* make datasets easy to browse and/or preview for non technical users
+* emphasize wiki-style revision history and conflict management/dispute resolution when users contribute to datasets
 
-h2. Contributing
+h2. Developers
 
-p. Inside the @data@ directory you will find all of the converted datasets from CivicApps. An easy way to help out is to find a pointfile (more shapefile datatypes will be supported soon!) dataset on CivicApps not yet imported into PDXAPI and format the data in a way similar to the data found in @data@. The key ingredient for spatial datasets is that the coordinates be representing using latitude/longitude. You can use the shp2yaml utility in the @lib@ folder to convert a shapefile directory into a YAML file.
+p. If you want to play around with a local instance, the easiest way to get data from CivicApps is to download lokkju's "pyspatialite":http://code.google.com/p/pyspatialite/ and "pyod":http://code.google.com/p/pyod/ to populate a spatialite enabled .sqlite database with CivicApps data. It should weigh in at around 700mb.
 
-p. To run the API server locally, you will need @ruby@ and @rubygems@ installed, as well as the following gems:
-
-<pre>
-  sinatra json haml rspec redis
-</pre>
-
-p. You will also need to install @redis@, which is used to store and query the map data. Once installed, start a redis instance by executing @redis-server@
-
-p. Populate redis with all of the data from the @data@ directory:
-
-<pre>
-  ruby lib/redisloader.rb
-</pre>
+p. You can use the @spatialiteexport@ utility to take the data from spatialite and generate a YAML file for each dataset. You can then use the @couchpush@ utility to load the YAML files into CouchDB
 
 h2. To-do
 
-* support for polyline/polygon/other shapefile formats
-* import 100% of datasets from civic apps
-* optimize query speed
 * iphone/android example mashup app source code using Titanium
+* google maps + jquery mashup app example source code
+* better documentation
 
 h2. License
 
