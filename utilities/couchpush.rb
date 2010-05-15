@@ -9,7 +9,6 @@ class CouchPush
       system "curl -X PUT http://localhost:5984/#{name}"
       system %Q!curl -X PUT -d '{\"spatial\":{\"points\":\"function(doc) {emit(doc._id, {type: \"Point\",coordinates: [doc.longitude, doc.latitude]});};\"}}\"}}' http://localhost:5984/#{name}/_design/main!
       post(name, YAML.load_file(dataset.path))
-      # d = d.split('(')[1].split(')')[0].split(' ').map {|i| i.to_f}
     end
   end
   

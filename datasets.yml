@@ -1,0 +1,1717 @@
+--- 
+leaf-pickup: 
+  uri: http://www.portlandonline.com/shared/file/data/Leaf_Pickup_pdx.zip
+  files: 
+  - PortlandLeafPickup\Leaf_Pickup_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assets_pdo"
+  - "route_pri_"
+  - "dist"
+  - "milage"
+schools-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Schools.zip
+  files: 
+  - schools
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "address"
+  - "city"
+  - "state"
+  - "zipcode"
+  - "zip4"
+  - "phone"
+  - "dist_no"
+  - "district"
+  - "level_no"
+  - "level"
+  - "grade"
+  - "type"
+transit-district-poly: 
+  uri: ftp://ftp.oregonmetro.gov/odi/TransitDistrict.zip
+  files: 
+  - transit_district.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "tran_dist"
+  - "area"
+fire-stations-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/FireStations.zip
+  files: 
+  - fire_sta
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "station"
+  - "address"
+  - "city"
+  - "district"
+trimet-bus-system-routes: 
+  uri: ftp://ftp.oregonmetro.gov/odi/BusRoutes.zip
+  files: 
+  - buslines.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "rte"
+  - "dir"
+  - "keyitem"
+  - "rte_desc"
+  - "dir_desc"
+  - "route"
+  - "length"
+tsp-classifications: 
+  uri: http://www.portlandonline.com/shared/file/data/Portland_TSP_Classifications.zip
+  files: 
+  - PortlandTSPClassifications\TSP_Classifications_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "tranplanid"
+  - "linkpath"
+  - "streetname"
+  - "traffic"
+  - "transit"
+  - "bicycle"
+  - "pedestrian"
+  - "freight"
+  - "emergency"
+  - "design"
+  - "greenscape"
+  - "shape_len"
+crime-incidents: 
+  uri: http://www.portlandonline.com/shared/file/data/Crime_Incident_data.zip
+  files: 
+  - crime_incident_data.csv
+  types: 
+  - csv
+  tables: 
+  - crime_incidents
+  headers: 
+  - rowno
+  - "report_date"
+  - "report_time"
+  - "major_offense_type"
+  - "address"
+  - "neighborhood"
+  - "police_precinct"
+  - "police_district"
+  - "x_coordinate"
+  - "y_coordiante"
+garbage-hauler-boundaries: 
+  uri: ftp://ftp.oregonmetro.gov/odi/HaulerFranchise.zip
+  files: 
+  - hauler
+  geoms: 
+  - POLYGON
+  types: 
+  - shp
+  tables: 
+  - garbage_hauler_boundaries
+  headers: 
+  - pkuid
+  - "geometry"
+  - "hn"
+  - "residentia"
+  - "phone"
+  - "commercial"
+  - "comm_phone"
+  - "dropbox"
+  - "dropbox_ph"
+  - "city"
+  - "account"
+  - "cnty"
+  - "agency"
+  - "unique_no"
+  - "area"
+tsp-district-boundaries: 
+  uri: http://www.portlandonline.com/shared/file/data/Portland_TSP_District_Boundaries.zip
+  files: 
+  - PortlandTSPDistrictBoundaries\TSP_District_Boundaries_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "tranplanid"
+  - "districtna"
+  - "cityname"
+  - "shape_area"
+  - "shape_len"
+development-opportunity-areas: 
+  uri: http://www.portlandonline.com/shared/file/data/Development_Opportunity_Areas_pdx.zip
+  files: 
+  - PortlandDevOppAreas\Development_Opp_Areas_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "egh_public"
+  - "state_id"
+  - "name"
+  - "shape_area"
+  - "shape_len"
+streets-jobs-contract-jobs-points: 
+  uri: http://www.portlandonline.com/shared/file/data/Street_Contract_Jobs_multipoint_pdx.zip
+  files: 
+  - PortlandStreetsContractJobsMulti\Streets_Contract_Jobs_Multipoint_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "rowmgmtid"
+  - "projectid"
+  - "status"
+  - "linkpath"
+  - "lngprojid"
+  - "lngdesigni"
+  - "lngconstru"
+  - "strproject"
+  - "memproject"
+  - "intactivit"
+  - "dtmcocsent"
+  - "strutility"
+  - "str1stutil"
+  - "str2ndutil"
+  - "str3rdutil"
+  - "strfullnam"
+  - "expr1"
+vegetation: 
+  uri: http://www.portlandonline.com/shared/file/data/vegetation_pdx.zip
+  files: 
+  - PortlandVegetation\Vegetation_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "perimeter"
+  - "patch_desc"
+  - "nvcs_class"
+  - "nvcs_subcl"
+  - "nvcs_group"
+  - "nvcs_subgr"
+  - "comment"
+  - "source"
+  - "editor"
+  - "edit_date"
+  - "edit_time"
+  - "review"
+  - "fld_date"
+  - "orig_edito"
+urban-renewal-areas: 
+  uri: http://www.portlandonline.com/shared/file/data/Urban_Renewal_Areas_pdx.zip
+  files: 
+  - PortlandUrbanRenewalAreas\Urban_Renewal_Area_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "ura"
+  - "egh_public"
+  - "acres"
+  - "shape_area"
+  - "shape_len"
+building-permits: 
+  uri: http://www.portlandonline.com/shared/file/data/permits.zip
+  files: 
+  - permits.csv
+  types: 
+  - csv
+  tables: 
+  - building_permits
+traffic-signals: 
+  uri: http://www.portlandonline.com/shared/file/data/traffic_signal_pdx.zip
+  files: 
+  - PortlandTrafficSignals\Traffic_Signals_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "signalnum"
+  - "signaltype"
+  - "hubloc"
+  - "commsource"
+  - "masterloc"
+  - "controller"
+  - "cabinetcha"
+  - "temptiming"
+  - "servicevol"
+  - "lastremode"
+  - "lastinvche"
+  - "lastinvch2"
+  - "rotation"
+  - "actuation_"
+  - "buspe_"
+  - "cabinettyp"
+  - "controlle2"
+  - "electricia"
+  - "emergencyp"
+  - "engineer_"
+  - "ismetered_"
+  - "lightrailp"
+  - "otherpe_"
+  - "powersuppl"
+  - "primarycon"
+  - "railroadpe"
+  - "roadauthor"
+  - "signalsyst"
+  - "softwarere"
+  - "softwarety"
+  - "standardsc"
+corners: 
+  uri: http://www.portlandonline.com/shared/file/data/Corners_pdx.zip
+  files: 
+  - PortlandCorners\Corner_Improved_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "radius"
+  - "drainagest"
+  - "extended_"
+  - "histfeatur"
+  - "material_"
+  - "rampstyle_"
+  - "warningsty"
+trimet-park-and-ride-lots: 
+  uri: ftp://ftp.oregonmetro.gov/odi/ParkRide.zip
+  files: 
+  - parkride.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "station"
+  - "address"
+  - "city"
+  - "zipcode"
+  - "county"
+  - "spaces"
+  - "status"
+city-halls-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/CityHalls.zip
+  files: 
+  - cityhall
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  tables: 
+  - city_halls_region
+  headers: 
+  - pkuid
+  - "geometry"
+  - "address"
+  - "city"
+  - "zipcode"
+storefront-improvement-areas: 
+  uri: http://www.portlandonline.com/shared/file/data/Storefront_Improvement_Areas_pdx.zip
+  files: 
+  - PortlandStorefrontImpAreas\Storefront_Improvement_Areas_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "egh_public"
+  - "state_id"
+  - "funding"
+  - "storefront"
+  - "active"
+  - "shape_area"
+  - "shape_len"
+city-boundaries-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/City.zip
+  files: 
+  - cty_fill
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  tables: 
+  - city_boundaries_region
+  headers: 
+  - pkuid
+  - "geometry"
+  - "area"
+  - "city_no"
+  - "cityname"
+capital-improvement-projects: 
+  uri: http://www.portlandonline.com/shared/file/data/CIP_Data_pdx.zip
+  files: 
+  - PortlandCIP\CIP_Points_pdx,PortlandCIP\CIP_Poly_pdx,PortlandCIP\CIP_Lines_pdx
+  geoms: 
+  - POINT,MULTIPOLYGON,MULTILINESTRING
+  types: 
+  - shp,shp,shp
+  tables: 
+  - capital_improvement_projects_point,capital_improvement_projects_poly,capital_improvement_projects_line
+streets-jobs-permit-jobs-line: 
+  uri: http://www.portlandonline.com/shared/file/data/Portland_Streets_Permit_Jobs_Line.zip
+  files: 
+  - PortlandStreetsPermitJobsLine\Street_Permit_Jobs_Line_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "rowmgmtid"
+  - "projectid"
+  - "status"
+  - "linkpath"
+  - "lngprojid"
+  - "strjobid"
+  - "strjobtitl"
+  - "strdescrip"
+  - "intcode"
+  - "intjobtype"
+  - "strutility"
+  - "str1stutil"
+  - "str2ndutil"
+  - "str3rdutil"
+  - "dtmcocsent"
+  - "strfullnam"
+  - "shape_len"
+guardrails: 
+  uri: http://www.portlandonline.com/shared/file/data/guardrail_pdx.zip
+  files: 
+  - PortlandGuardrails\Guardrails_pdx
+  geoms: 
+  - MULTILINESTRING
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "guardrailt"
+  - "totallengt"
+  - "sectionlen"
+  - "numbersect"
+  - "railheight"
+  - "numposts"
+  - "postspacin"
+  - "postdimens"
+  - "blockouts_"
+  - "farendtrea"
+  - "nearendtre"
+  - "posttype_"
+  - "railtype_"
+county-boundaries-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/County.zip
+  files: 
+  - co_fill
+  geoms: 
+  - POLYGON
+  types: 
+  - shp
+  tables: 
+  - county_boundaries_region
+  headers: 
+  - pkuid
+  - "geometry"
+  - "area"
+  - "county_no"
+  - "county"
+county-boundaries: 
+  uri: http://www.portlandonline.com/shared/file/data/Counties_pdx.zip
+  files: 
+  - PortlandCounties\counties_pdx
+  geoms: 
+  - POLYGON
+  types: 
+  - shp
+  tables: 
+  - county_boundaries
+  headers: 
+  - pkuid
+  - "geometry"
+  - "county_no"
+  - "county"
+city-boundaries: 
+  uri: http://www.portlandonline.com/shared/file/data/Cities_pdx.zip
+  files: 
+  - PortlandCities\cities
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  tables: 
+  - city_boundaries
+  headers: 
+  - pkuid
+  - "geometry"
+  - "city_no"
+  - "cityname"
+trimet-transit-centers: 
+  uri: ftp://ftp.oregonmetro.gov/odi/TransitCenter.zip
+  files: 
+  - tran_cen.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "address"
+  - "city"
+  - "zipcode"
+  - "county"
+street-centerlines: 
+  uri: http://www.portlandonline.com/shared/file/data/Streets_pdx.zip
+  files: 
+  - PortlandStreets\Streets,PortlandStreets\Streets_pdx
+  geoms: 
+  - LINESTRING,LINESTRING
+  types: 
+  - shp,shp
+  tables: 
+  - street_centerlines,street_centerline_pdx
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "length"
+  - "localid"
+  - "zero"
+  - "prefix"
+  - "streetname"
+  - "ftype"
+  - "direction"
+  - "leftadd1"
+  - "leftadd2"
+  - "rgtadd1"
+  - "rgtadd2"
+  - "leftzip"
+  - "rightzip"
+  - "type"
+  - "lcounty"
+  - "rcounty"
+  - "lcity"
+  - "rcity"
+  - "suffix"
+  - "full_name"
+  - "side"
+  - "source"
+  - "cfcc"
+  - "subarea"
+  - "struc_type"
+  - "left_jur"
+  - "right_jur"
+  - "upd_date"
+  - "create_dat"
+pavement-maintained-not-maintained: 
+  uri: http://www.portlandonline.com/shared/file/data/Pavement_Maint_pdx.zip
+  files: 
+  - PortlandPavementMaint\Pavement_Maint_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "assetid"
+  - "status"
+  - "owner"
+  - "maintresp"
+  - "locationid"
+  - "imagepath"
+  - "sectionid"
+  - "length"
+  - "townshipra"
+  - "functional"
+  - "jurisdicti"
+  - "warranty"
+  - "warrantyen"
+  - "streetname"
+  - "beglocatio"
+  - "endlocatio"
+  - "roadwidth"
+  - "sqyards"
+  - "equiv28ft"
+  - "equiv12ft"
+  - "sealtype"
+  - "pavetype"
+  - "surfacetyp"
+  - "surfacethi"
+  - "basetype"
+  - "basethickn"
+  - "lastinspec"
+  - "inspectedb"
+  - "pci"
+  - "numberofla"
+  - "curb"
+  - "coretaken"
+  - "baserepair"
+  - "maintenanc"
+  - "maintenan2"
+  - "rehabdate"
+  - "rehabtype"
+  - "rehabthick"
+  - "shape_len"
+street-sweeping-routes: 
+  uri: http://www.portlandonline.com/shared/file/data/Street_Sweeping_pdx.zip
+  files: 
+  - PortlandStreetSweeping\Day_Street_Sweeping_pdx.shp,PortlandStreetSweeping\Night_Street_Sweeping_pdx.shp
+  types: 
+  - shp,shp
+  tables: 
+  - street_sweeping_routes_day,street_sweeping_routes_night
+elevation-map: 
+  uri: http://www.portlandonline.com/shared/file/data/Contours_5ft_pdx.zip
+  files: 
+  - PortlandContours5ft\Contours_5ft_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "elevation"
+  - "subset"
+signage-lighting-improvement-program: 
+  uri: http://www.portlandonline.com/shared/file/data/Signage_Lighting_Improvement_Program_pdx.zip
+  types: 
+  - shp
+bridges: 
+  uri: http://www.portlandonline.com/shared/file/data/Bridges_pdx.zip
+  files: 
+  - PortlandBridges\Bridges_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  tables: 
+  - bridges
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "bridgetype"
+  - "bridgeidlo"
+  - "bridgeidst"
+  - "bridgeidfe"
+  - "vehclearan"
+  - "materialma"
+streets-local-improvement-district: 
+  uri: http://www.portlandonline.com/shared/file/data/LID_Streets_pdx.zip
+  files: 
+  - PortlandLIDStreets\LID_Streets_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "lid_status"
+  - "projectid"
+  - "lid_commen"
+hospitals-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Hospitals.zip
+  files: 
+  - hospital
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "address"
+  - "city"
+  - "zipcode"
+ground-slope: 
+  uri: http://www.portlandonline.com/shared/file/data/Percent_Slope_pdx.zip
+  files: 
+  - PortlandPercentSlope\Percent_Slope_pdx
+  geoms: 
+  - POLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "id"
+  - "percent_"
+  - "shape_area"
+  - "shape_len"
+traffic-calming-devices: 
+  uri: http://www.portlandonline.com/shared/file/data/traffic_calming_pdx.zip
+  files: 
+  - PortlandTrafficCalming\Traffic_Calming_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "tctype"
+  - "tclength"
+  - "width"
+  - "profile"
+  - "projecttyp"
+  - "rotation"
+  - "curbs_"
+  - "material_"
+  - "spantype_"
+address-points: 
+  uri: http://www.portlandonline.com/shared/file/data/address.zip
+  files: 
+  - address_data.csv
+  types: 
+  - csv
+  tables: 
+  - address_points
+  headers: 
+  - rowno
+  - "address_id"
+  - "address_number"
+  - "address_number_char"
+  - "leading_zero"
+  - "str_predir_code"
+  - "street_name"
+  - "street_type_code"
+  - "str_postdir_code"
+  - "unit_value"
+  - "city"
+  - "county"
+  - "state_abbrev"
+  - "zip_code"
+  - "zip4"
+  - "address_full"
+  - "x"
+  - "y"
+curb-ramps: 
+  uri: http://www.portlandonline.com/shared/file/data/Curb_Ramps_pdx.zip
+  files: 
+  - PortlandCurbRamps\Curb_Ramps_pdx
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "nonassetid"
+  - "imagepath"
+  - "installdat"
+  - "projectnum"
+  - "adawarning"
+parks-desired-future-conditions: 
+  uri: http://www.portlandonline.com/shared/file/data/Parks_Desired_Future_Cond_pdx.zip
+  files: 
+  - PortlandParksDesiredFutureCond\Parks_Desired_Fut_Cond_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "propertyid"
+  - "project"
+  - "comment"
+  - "acode"
+  - "alliance"
+  - "ecosystem"
+  - "acres"
+home-buyer-opportunity-areas: 
+  uri: http://www.portlandonline.com/shared/file/data/HomeBuyer_Opportunity_Areas_pdx.zip
+  files: 
+  - PortlandHomebuyerOppAreas\Homebuyer_Opp_Area_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "egh_public"
+  - "perimeter"
+  - "distress20"
+  - "distress21"
+  - "type"
+  - "shape_area"
+  - "shape_len"
+sidewalks: 
+  uri: http://www.portlandonline.com/shared/file/data/Sidewalks_pdx.zip
+  files: 
+  - PortlandSidewalks\Sidewalks_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "drainagest"
+  - "histfeatur"
+  - "material_"
+  - "rampstyle_"
+  - "sidewalkty"
+  - "warningsty"
+address-points-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Addresses.zip
+  files: 
+  - master_address
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  tables: 
+  - address_points_region
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "house_no"
+  - "leadzero"
+  - "house"
+  - "unit_type"
+  - "unit_no"
+  - "fdpre"
+  - "fname"
+  - "ftype"
+  - "fdsuf"
+  - "fulladd"
+  - "state"
+  - "zip"
+  - "zip4"
+  - "tlid"
+  - "source"
+  - "x_coord"
+  - "y_coord"
+  - "address"
+  - "juris_city"
+  - "mail_city"
+light-rail: 
+  uri: ftp://ftp.oregonmetro.gov/odi/LightRail.zip
+  files: 
+  - lrt_line
+  geoms: 
+  - LINESTRING
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "length"
+  - "status"
+  - "type"
+  - "tunnel"
+its-cameras-intelligent-transportation-system: 
+  uri: http://www.portlandonline.com/shared/file/data/its_camera_pdx.zip
+  files: 
+  - PortlandITSCameras\ITS_Cameras_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "cameranum"
+  - "cameramode"
+  - "electricmo"
+  - "rotation"
+  - "camerastyl"
+  - "electricia"
+  - "engineer_"
+  - "ismetered_"
+  - "powersuppl"
+heritage-trees: 
+  uri: http://www.portlandonline.com/shared/file/data/Heritage_Trees_pdx.zip
+  files: 
+  - PortlandHeritageTrees\Heritage_Trees_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "treeid"
+  - "status"
+  - "scientific"
+  - "common_nam"
+  - "stateid"
+  - "address"
+  - "height"
+  - "spread"
+  - "circumfere"
+  - "diameter"
+  - "year"
+  - "owner"
+  - "notes"
+zip-codes-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/ZipCodes.zip
+  files: 
+  - zipcode.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "zipcode"
+  - "name"
+  - "type"
+  - "state"
+bicycle-network: 
+  uri: http://www.portlandonline.com/shared/file/data/Bicycle_Network_pdx.zip
+  files: 
+  - PortlandBicycleNetwork\Bicycle_Network_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "tranplanid"
+  - "segmentnam"
+  - "status"
+  - "facility"
+  - "facilityde"
+  - "projectid"
+  - "yearbuilt"
+  - "num8inline"
+  - "material8i"
+  - "num4inline"
+  - "material4i"
+  - "assets_pdo"
+  - "shape_len"
+neighborhood-associations: 
+  uri: http://www.portlandonline.com/shared/file/data/Neighborhoods_pdx.zip
+  files: 
+  - PortlandNeighborhoods\Neighborhoods_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "perimeter"
+  - "assn_"
+  - "assn_id"
+  - "name"
+  - "commplan"
+  - "shared"
+  - "coalit"
+  - "check_"
+  - "horz_vert"
+trimet-bus-system-stops: 
+  uri: ftp://ftp.oregonmetro.gov/odi/BusStops.zip
+  files: 
+  - busstops.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "keyitem"
+  - "rte"
+  - "dir"
+  - "loc_id"
+  - "location"
+  - "jurisdic"
+  - "zip"
+  - "route"
+pavement-moratorium-streets: 
+  uri: http://www.portlandonline.com/shared/file/data/Pavemoratorium_pdx.zip
+  files: 
+  - PortlandPavemoratorium\Pavement_Moratorium_pdx
+  geoms: 
+  - MULTILINESTRING
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "nonassetid"
+  - "status"
+  - "owner"
+  - "maintresp"
+  - "imagepath"
+  - "streetname"
+  - "fromstreet"
+  - "tostreet"
+  - "datepaved"
+  - "moratorium"
+  - "proposedye"
+  - "proposedse"
+  - "projectnum"
+  - "yearonly"
+  - "projectown"
+  - "shape_len"
+snow-ice-routes: 
+  uri: http://www.portlandonline.com/shared/file/data/Snow_Ice_Routes_pdx.zip
+  files: 
+  - PortlandSnowIceRoutes\Snow_Ice_Routes_pdx
+  geoms: 
+  - MULTILINESTRING
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "st_name"
+  - "route_no"
+  - "image_dwg"
+  - "no_lanes"
+  - "lane_miles"
+  - "cline_mile"
+parks-vegetation-survey: 
+  uri: http://www.portlandonline.com/shared/file/data/Parks_Vegetation_Surveys_pdx.zip
+  files: 
+  - PortlandParksVegetationSurvey\Parks_Vegetation_Survey_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "poly_code"
+  - "acres"
+  - "property_c"
+  - "wildlife_u"
+  - "nvcs_class"
+  - "nvcs_subcl"
+  - "nvcs_group"
+  - "nvcs_subgr"
+  - "nvcs_forma"
+  - "nvcs_ecolo"
+  - "nvcs_allia"
+  - "nvcs_assoc"
+  - "survey_uni"
+  - "past_land_"
+  - "last_visit"
+  - "pct_tree_c"
+  - "visit_note"
+  - "visit_not2"
+  - "visit_not3"
+  - "wetland_no"
+  - "visit_not4"
+  - "pct_non_na"
+  - "ecological"
+  - "shape_area"
+  - "shape_len"
+wellhead-protection-area: 
+  uri: http://www.portlandonline.com/shared/file/data/Wellhead_Prot_Areas_pdx.zip
+  files: 
+  - PortlandWellheadProtArea\WellheadProtArea_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "title"
+  - "date"
+light-rail-stops: 
+  uri: ftp://ftp.oregonmetro.gov/odi/LightRailStops.zip
+  files: 
+  - lrt_stop
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "station"
+  - "status"
+  - "type"
+zoning-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Zoning.zip
+  files: 
+  - zoning.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+pedestrian-districts: 
+  uri: http://www.portlandonline.com/shared/file/data/Pedestrian_Districts_pdx.zip
+  files: 
+  - PortlandPedestrianDistricts\Pedestrian_Districts_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "tranplanid"
+  - "peddistric"
+  - "shape_area"
+  - "shape_len"
+bicycle-parking: 
+  uri: http://www.portlandonline.com/shared/file/data/bicycle_parking_pdx.zip
+  files: 
+  - PortlandBicycleParking\Bicycle_Parking_pdx
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  tables: 
+  - bicycle_parking
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "bikeparkty"
+  - "numspaces"
+  - "numunits"
+  - "bplevel"
+  - "finish"
+  - "mounting"
+  - "rotation"
+  - "bpfund_"
+  - "bpstyle_"
+  - "covered_"
+parks: 
+  uri: http://www.portlandonline.com/shared/file/data/Parks_pdx.zip
+  files: 
+  - PortlandParks\Parks_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "name"
+  - "propertyid"
+  - "acres"
+  - "orient"
+  - "shape_area"
+  - "shape_len"
+parks-easements: 
+  uri: http://www.portlandonline.com/shared/file/data/Parks_Easements_pdx.zip
+  files: 
+  - PortlandParksEasements\Parks_Easements_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "property_n"
+  - "property_i"
+  - "ordinance"
+  - "ordinance_"
+  - "grant_type"
+  - "easement_t"
+  - "notes"
+  - "acres"
+transit-stations: 
+  uri: http://www.portlandonline.com/shared/file/data/Portland_Transit_Stations.zip
+  files: 
+  - PortlandTranistStations\Transit_Stations_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "tranplanid"
+  - "transitsto"
+  - "transitmod"
+  - "status"
+intermodal-facilities: 
+  uri: http://www.portlandonline.com/shared/file/data/Intermodal_Facilities_pdx.zip
+  files: 
+  - PortlandIntermodalFacilities\Intermodal_Facilities_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "tranplanid"
+  - "facilityna"
+its-signs-intelligent-transportation-system: 
+  uri: http://www.portlandonline.com/shared/file/data/its_sign_pdx.zip
+  files: 
+  - PortlandITSSigns\ITS_Signs_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "signnum"
+  - "signmodel"
+  - "width"
+  - "height"
+  - "electricmo"
+  - "rotation"
+  - "electricia"
+  - "engineer_"
+  - "ismetered_"
+  - "powersuppl"
+  - "signstyle_"
+parks-taxlots: 
+  uri: http://www.portlandonline.com/shared/file/data/Parks_Taxlots_pdx.zip
+  files: 
+  - PortlandParksTaxlots\Parks_Taxlots_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "camp_id"
+  - "rno"
+  - "stateid"
+  - "propertyid"
+  - "geometry_s"
+  - "camp_prope"
+  - "address"
+  - "addition_s"
+  - "year_acqui"
+  - "camp_sq_ft"
+  - "year_recor"
+  - "date_recor"
+  - "grantor"
+  - "acquisitio"
+  - "ordinance"
+  - "deed"
+  - "notes"
+  - "shape_area"
+  - "shape_len"
+parks-trails: 
+  uri: http://www.portlandonline.com/shared/file/data/Parks_Trails_pdx.zip
+  files: 
+  - PortlandParksTrails\Parks_Trails_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "propertyid"
+  - "local_name"
+  - "type"
+  - "status"
+  - "manager"
+  - "surface"
+  - "width_ft"
+  - "source"
+  - "regional_t"
+  - "columbia_s"
+  - "forty_mile"
+  - "i_205"
+  - "marine_dri"
+  - "marquam"
+  - "springwate"
+  - "willamette"
+  - "notes"
+  - "red_electr"
+  - "hillsdale_"
+  - "fanno_cree"
+  - "miles"
+  - "shape_len"
+watershed-sub-watershed-info: 
+  uri: http://www.portlandonline.com/shared/file/data/Watersheds_pdx.zip
+  files: 
+  - PortlandWatersheds\Watershed_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "watershed"
+  - "xcoor"
+  - "ycoor"
+  - "washd_code"
+  - "egh_public"
+  - "egh_publi2"
+  - "shape_area"
+  - "shape_len"
+parks-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Parks.zip
+  files: 
+  - parks
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "area"
+  - "name"
+  - "usage"
+  - "park"
+  - "custodian"
+  - "bondacqu"
+  - "type"
+streets-jobs-permit-jobs-points: 
+  uri: http://www.portlandonline.com/shared/file/data/Portland_Streets_Permit_Jobs_Point.zip
+  files: 
+  - PortlandStreetsPermitJobsPoint\Streets_Permit_Jobs_Point_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "rowmgmtid"
+  - "projectid"
+  - "status"
+  - "linkpath"
+  - "lngprojid"
+  - "strjobid"
+  - "strjobtitl"
+  - "strdescrip"
+  - "intcode"
+  - "intjobtype"
+  - "strutility"
+  - "str1stutil"
+  - "str2ndutil"
+  - "str3rdutil"
+  - "dtmcocsent"
+  - "strfullnam"
+business-association-boundaries: 
+  uri: http://www.portlandonline.com/shared/file/data/Business_Associations_pdx.zip
+  files: 
+  - PortlandBusAssoc\Business_Associations
+  geoms: 
+  - POLYGON
+  types: 
+  - shp
+  tables: 
+  - business_association_boundaries
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "perimeter"
+  - "busassc_"
+  - "busassc_id"
+  - "name"
+  - "apnba"
+  - "contact"
+  - "phone"
+  - "email"
+  - "shared"
+  - "ba"
+business-licenses: 
+  uri: http://portlandonline.com/shared/file/data/business_licenses.zip
+  files: 
+  - business_licenses.csv
+  types: 
+  - csv
+  tables: 
+  - business_licenses
+streets-jobs-contract-jobs-line: 
+  uri: http://www.portlandonline.com/shared/file/data/Street_Contract_Jobs_line_pdx.zip
+  files: 
+  - PortlandStreetsContractJobs\Street_Contract_Jobs_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "rowmgmtid"
+  - "projectid"
+  - "status"
+  - "linkpath"
+  - "lngprojid"
+  - "lngdesigni"
+  - "lngconstru"
+  - "strproject"
+  - "memproject"
+  - "intactivit"
+  - "dtmcocsent"
+  - "strutility"
+  - "str1stutil"
+  - "str2ndutil"
+  - "str3rdutil"
+  - "strfullnam"
+  - "expr1"
+  - "shape_len"
+streets-jobs-permit-jobs-polygon: 
+  uri: http://www.portlandonline.com/shared/file/data/Portland_Streets_Permit_Jobs_Polygon.zip
+  files: 
+  - PortlandStreetsPermitJobsPoly\Streets_Permit_Jobs_Polygon_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "modifiedby"
+  - "modifiedon"
+  - "modifiedus"
+  - "comments"
+  - "rowmgmtid"
+  - "projectid"
+  - "status"
+  - "linkpath"
+  - "lngprojid"
+  - "strjobid"
+  - "strjobtitl"
+  - "strdescrip"
+  - "intcode"
+  - "intjobtype"
+  - "strutility"
+  - "str1stutil"
+  - "str2ndutil"
+  - "str3rdutil"
+  - "dtmcocsent"
+  - "strfullnam"
+  - "shape_area"
+  - "shape_len"
+enterprise-and-e-commerce-zones: 
+  uri: http://www.portlandonline.com/shared/file/data/Enterprise_ECommerce_Zone_pdx.zip
+  files: 
+  - PortlandEntEComZones\Enterprise_Ecommerce_Zone_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "id"
+  - "name"
+  - "egh_public"
+  - "perimeter"
+  - "acres"
+  - "hectacres"
+  - "shape_area"
+  - "shape_len"
+zip-codes: 
+  uri: http://www.portlandonline.com/shared/file/data/Zipcodes_pdx.zip
+  files: 
+  - PortlandZipCodes\ZipCodes_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "objectid"
+  - "zipcode"
+  - "name"
+  - "type"
+  - "state"
+metro-council-districts: 
+  uri: ftp://ftp.oregonmetro.gov/odi/MetroCouncil.zip
+  files: 
+  - council
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "district"
+  - "name"
+  - "email"
+  - "webpageid"
+  - "area"
+zoning: 
+  uri: http://www.portlandonline.com/shared/file/data/Zoning_Data_pdx.zip
+  files: 
+  - PortlandZoning\Zoning_Anno_pdx.shp,PortlandZoning\Zoning_Arrows_pdx.shp,PortlandZoning\Zoning_Lines_pdx.shp,PortlandZoning\Zoning_pdx.shp
+  types: 
+  - shp,shp,shp,shp
+  tables: 
+  - zoning_anno,zoning_arrows,zoning_lines,zoning
+  headers: 
+  - pkuid
+  - "geometry"
+  - "perimeter"
+  - "tmpzone"
+  - "zone"
+  - "cmp"
+  - "ovrly"
+  - "cmpovr"
+  - "pldist"
+  - "hist"
+  - "consv"
+  - "nrmp"
+  - "update_"
+  - "uninc"
+streets-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Streets.zip
+  files: 
+  - streets
+  geoms: 
+  - LINESTRING
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "length"
+  - "localid"
+  - "zero"
+  - "prefix"
+  - "streetname"
+  - "ftype"
+  - "direction"
+  - "leftadd1"
+  - "leftadd2"
+  - "rgtadd1"
+  - "rgtadd2"
+  - "leftzip"
+  - "rightzip"
+  - "type"
+  - "lcounty"
+  - "rcounty"
+  - "lcity"
+  - "rcity"
+  - "up_date"
+  - "cr_date"
+neighborhood-associations-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Neighborhoods.zip
+  files: 
+  - nbo_hood
+  geoms: 
+  - POLYGON
+  types: 
+  - shp
+  tables: 
+  - neighborhood_associations_region
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "area"
+freight-facilities: 
+  uri: http://www.portlandonline.com/shared/file/data/Freight_Facilities_pdx.zip
+  files: 
+  - PortlandFreightFacilities\Freight_Facilities_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "tranplanid"
+  - "facilityna"
+  - "owner"
+local-improvement-districts: 
+  uri: http://www.portlandonline.com/shared/file/data/LID_Boundaries_pdx.zip
+  files: 
+  - PortlandLIDBoundaries\LID_Boundaries_pdx
+  geoms: 
+  - MULTIPOLYGON
+  types: 
+  - shp
+  tables: 
+  - local_improvement_districts
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "lid_status"
+  - "projectid"
+  - "lid_commen"
+freight-districts: 
+  uri: http://www.portlandonline.com/shared/file/data/Freight_Districts_pdx.zip
+  files: 
+  - PortlandFreightDistricts\Freight_Districts_pdx.shp
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "geodb_oid"
+  - "objectid"
+  - "tranplanid"
+  - "freightdis"
+  - "shape_area"
+  - "shape_len"
+trimet-complete-schedule: 
+  uri: http://developer.trimet.org/schedule/current.zip
+  types: 
+  - csv
+curbs: 
+  uri: http://www.portlandonline.com/shared/file/data/Curbs_pdx.zip
+  files: 
+  - PortlandCurbs\Curbs_pdx
+  geoms: 
+  - MULTILINESTRING
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "curbtype"
+  - "width"
+  - "curbstyle_"
+  - "draintiles"
+  - "histfeatur"
+libraries-region: 
+  uri: ftp://ftp.oregonmetro.gov/odi/Libraries.zip
+  files: 
+  - library
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "name"
+  - "address"
+  - "city"
+  - "state"
+  - "zip"
+parking-meters: 
+  uri: http://www.portlandonline.com/shared/file/data/Parking_Meters_pdx.zip
+  files: 
+  - PortlandParkingMeters\Parking_Meters_pdx
+  geoms: 
+  - POINT
+  types: 
+  - shp
+  headers: 
+  - pkuid
+  - "geometry"
+  - "assetid"
+  - "locationid"
+  - "imagepath"
+  - "metercode"
+  - "meterid"
+  - "sectorid"
+  - "metertype"
+  - "numspaces"
+  - "mechanism"
+  - "programs"
+  - "keyarea"
+  - "collection"
+  - "signmounto"
+  - "rotation"
+  - "duration_"
+  - "housing_"
+  - "model_"

@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# ------------------------------------------------------------------------------------------------------
+# this is not in development anymore and has been replaced by the python pyod and pyspatialite projects
+# ------------------------------------------------------------------------------------------------------
+
 # this assumes you have the shp2text and cs2cs binaries installed and in your path
 # you also will have to customize the coordinate_transform function to match your shapefile .prj settings
 # also, this is definitely hacky and isn't very maintainable

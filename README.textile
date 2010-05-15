@@ -20,7 +20,7 @@ h2. Developers
 
 p. If you want to play around with a local instance, the easiest way to get data from CivicApps is to download lokkju's "pyspatialite":http://code.google.com/p/pyspatialite/ and "pyod":http://code.google.com/p/pyod/ to populate a spatialite enabled .sqlite database with CivicApps data. It should weigh in at around 700mb.
 
-p. You can use the @spatialiteexport@ utility to take the data from spatialite and generate a YAML file for each dataset. You can then use the @couchpush@ utility to load the YAML files into CouchDB
+p. You can use the @spatialiteexport@ and @wkt2geojson@ utilities to take the data from spatialite and generate a json file for each dataset. You can then use the @couchpush@ utility to load the YAML files into CouchDB
 
 h2. To-do
 

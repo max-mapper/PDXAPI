@@ -1,3 +1,7 @@
+# this is the initial version of the proximity lookup database
+# this isn't in use anymore and has been replaced by geocouch
+# it has been included for reference, as it demonstrates how to calculate the distance between two lat/lon points on a geoid in pure ruby
+
 module Haversine
   RAD_PER_DEG = 0.017453293
   Rmiles = 3956
