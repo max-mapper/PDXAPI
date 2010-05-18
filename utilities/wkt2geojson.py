@@ -1,6 +1,6 @@
 
 # This utility turned out to be too memory inefficient to be useful with the data I was working with, so I used the ruby version of this algorithm instead
-# I have included it here for reference, as it demonstrates how to convert WKT to GeoJson in python
+# I have included this here for reference, as it demonstrates how to convert WKT to GeoJson in python
 
 import sys
 import yaml

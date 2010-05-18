@@ -13,18 +13,27 @@
     #map {
       width: 100%;
       height: 300px; }
-
-    #crosshair {
+      
+    .map_button {
+      z-index: 666;
+      background-color: #FFF;
+      border: 1px solid #000;
       position: absolute;
-      top: 140px;
-      height: 19px;
-      width: 19px;
-      left: 50%;
-      margin-left: -8px;
-      display: block;
-      background: url(crosshair.gif);
-      background-position: center center;
-      background-repeat: no-repeat; }
+      padding: 0px 5px;
+      top: 5px;
+      right: 5px;
+      cursor:hand;
+      cursor:pointer;
+    }
+    .map_button:active{
+      top: 6px;
+    }
+    #dataset {
+      position: absolute;
+      top: 9px;
+      right: 110px;
+    }
+    
   </style>
 </head>
 <body>
@@ -33,11 +42,20 @@
   <table cellspacing=0 cellpadding=0>
   <thead>
     <div id="map"></div>
-    <div id="crosshair"></div>
+    <select id="dataset">
+      <option value='bicycle_parking'      >bicycle parking</option>
+      <option value='fire_stations_region' >fire stations</option>
+      <option value='city_halls_region'    >city halls</option>
+      <option value='hospitals_region'     >hospitals</option>
+      <option value='light_rail_stops'     >light rail stops</option>
+      <option value='schools_region'       >schools</option>
+      <option value='libraries_region'     >libraries</option>
+    </select>
+    <div id="fullscreen" class="map_button">view larger</div>
     <tr>
       <th class=docs><h1>PDX API</h1></th>
       <td class=code>
-        <code><i>Drag the map to view the 10 bike racks closest to the crosshair.</i></code>
+        <code><i>Drag the map around to explore bike rack locations</i></code>
       </td>
     </tr>
   </thead>
@@ -47,7 +65,8 @@
         <div class="octowrap">
           <a class="octothorpe" href="#section-1">#</a>
         </div>
-        <p> <strong>PDXAPI</strong> is a JSON API that provides access to data from <a         href="http://www.civicapps.org">CivicApps</a>,
+        <p><strong>UPDATE 5/13/10: PDXAPI is being migrated to a new version of GeoCouch and the API may be unavailable. This project is still very much a work in progress! Follow my tweeters if you want to stay up to date: <a href='http://www.twitter.com/maxogden'>@maxogden</a></strong></p>
+        <p> <strong>PDXAPI</strong> is a JSON API that provides access to data from <a href="http://www.civicapps.org">CivicApps</a>,
          the open data initiative by the City of Portland.</p>
         <p> Much of the data on CivicApps is in a very raw and hard to use form.
          PDX API exists to filter the data from CivicApps and provide it in the
@@ -107,9 +126,11 @@
       <td class=docs>
         <div class="octowrap">
           <a class="octothorpe" href="#section-3">#</a>
-          <h3>Contribute</h3>
-          <p> Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
-           or <a href="http://www.maxogden.com">contact me</a> if you are interested in helping out.</p>
+          <h3>Developers</h3>
+          <p>PDXAPI is powered by <a href="http://www.github.com/vmx/couchdb">GeoCouch</a>, a spatial index enabled flavor of CouchDB. This means that every piece of data in PDXAPI is accessible and editable through a REST-like interface, and that a revision history will be kept for each data point.</p> 
+          <p>I am in the process of creating example client applications that take advantage of the full capabilities of the platform; the eye candy at the top of this page is just a teaser.</p>
+          <p> Want to help out? Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
+           or <a href="http://www.maxogden.com">contact me</a> if you are interested.</p>
           </div>
           
         </div>
@@ -117,7 +138,91 @@
       <td class=code>
         <h3>Datasets</h3>
         <p> Datasets currently available through PDX API:</p>
-        <p> <code>bike_racks</code> <code>heritage_trees</code> <code>libraries</code> <code>schools</code> <code>fire_stations</code> <code>hospitals</code> <code>parking_meters</code>
+        <p> 
+          <pre>
+          address_points_region
+          bicycle_network
+          bicycle_parking
+          bridges
+          business_association_boundaries
+          capital_improvement_projects_line
+          capital_improvement_projects_point
+          capital_improvement_projects_poly
+          city_boundaries
+          city_halls_region
+          corners
+          county_boundaries
+          county_boundaries_region
+          curb_ramps
+          curbs
+          development_opportunity_areas
+          elevation_map
+          enterprise_and_e_commerce_zones
+          fire_stations_region
+          freight_districts
+          freight_facilities
+          garbage_hauler_boundaries
+          guardrails
+          heritage_trees
+          home_buyer_opportunity_areas
+          hospitals_region
+          intermodal_facilities
+          its_cameras_intelligent_transportation_system
+          its_signs_intelligent_transportation_system
+          leaf_pickup
+          libraries_region
+          light_rail
+          light_rail_stops
+          local_improvement_districts
+          metro_council_districts
+          neighborhood_associations
+          neighborhood_associations_region
+          parking_meters
+          parks
+          parks_easements
+          parks_region
+          parks_taxlots
+          parks_trails
+          parks_vegetation_survey
+          pavement_maintained_not_maintained
+          pavement_moratorium_streets
+          pedestrian_districts
+          schools_region
+          sidewalks
+          snow_ice_routes
+          storefront_improvement_areas
+          street_centerline_pdx
+          street_centerlines
+          street_sweeping_routes_day
+          street_sweeping_routes_night
+          streets_jobs_contract_jobs_line
+          streets_jobs_contract_jobs_points
+          streets_jobs_permit_jobs_line
+          streets_jobs_permit_jobs_points
+          streets_jobs_permit_jobs_polygon
+          streets_local_improvement_district
+          streets_region
+          traffic_calming_devices
+          traffic_signals
+          transit_district_poly
+          transit_stations
+          trimet_bus_system_routes
+          trimet_bus_system_stops
+          trimet_park_and_ride_lots
+          trimet_transit_centers
+          tsp_classifications
+          tsp_district_boundaries
+          urban_renewal_areas
+          vegetation
+          watershed_sub_watershed_info
+          wellhead_protection_area
+          zip_codes
+          zip_codes_region
+          zoning_anno
+          zoning_arrows
+          zoning_lines
+          zoning_region
+          </pre>
         </p>
         <p> More to come soon!</p>
       </td>

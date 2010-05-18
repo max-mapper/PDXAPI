@@ -1,18 +1,42 @@
+var map;
 $(document).ready(function(){
+  $('#fullscreen').live('click', function(){
+    var button = $(this);
+    button.text('view smaller');
+    $('#map').animate({'height': $(window).height()}, function(){
+      map.checkResize();
+      updateBikeRacks();
+    });
+    $('#fullscreen').attr("id", "smallscreen");
+  });
+  
+  $('#smallscreen').live('click', function(){
+    var button = $(this);
+    button.text('view larger');
+    $('#map').animate({'height': '300px'}, function(){
+      map.checkResize();
+      updateBikeRacks();
+    });
+    $('#smallscreen').attr("id", "fullscreen");
+  });
+
+  $('#dataset').change(function(){
+    updateBikeRacks();
+  });
+  
   function getBikeRacks(lat, lon, count) {
+    var one_block = 0.0012;
+    var dataset = $('#dataset').val();
+    console.log("http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points/%5B"+ (lon + one_block) + "," + (lat + one_block) + "," + (lon - one_block) + "," + (lat - one_block) + "%5D");
     $.ajax({
-      url: "http://www.pdxapi.com/bike_racks",
+      url: "http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points/%5B"+ (lon + one_block) + "," + (lat + one_block) + "," + (lon - one_block) + "," + (lat - one_block) + "%5D",
       dataType: 'jsonp',
-      data: {
-        "lat":lat,
-        "lon":lon,
-        "count":count
-      },
-      success: function(data){
+      success: function(response){
+        var data = response.spatial;
         map.clearOverlays();
         var markers = [];
         $.each(data, function(i,point) {
-          var point = new GLatLng(point.latitude, point.longitude);
+          var point = new GLatLng(point.bbox[1], point.bbox[0]);
           var marker = new GMarker(point, {icon:bikeRack});
           map.addOverlay(marker);
           markers.push(marker);
@@ -26,7 +50,7 @@ $(document).ready(function(){
     getBikeRacks(center.lat(), center.lng(), 10);
   };
   
-  var map = new GMap2($("#map").get(0));
+  map = new GMap2($("#map").get(0));
   
   var bikeRack = new GIcon();
   bikeRack.image = 'bikerack.png';
