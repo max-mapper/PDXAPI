@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="stylesheet" href="openlayers/theme/default/style.css" type="text/css" />
+    
+    <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAUXDSXET8IRGdgHP9FpGw5BT-fVzUWGS_eJ2ZLPBO_6yPqTi0vhQKAzahOrduDq0xQk09GR-UP3Jgcg'></script>
+    <script src="/openlayers/OpenLayers.js"></script>
+    <script src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2&mkt=en-us"></script> 
+    <script src='jquery-1.4.2.min.js'></script>
+    <script src='jquery.enumerable.js'></script>
+    <style type="text/css">
+      #map {
+        width: 100%;
+        height: 500px; }
+
+    </style>
+    <script type="text/javascript">
+        var map, current_dataset;
+        var datasets = ["bicycle_network", "bicycle_parking", "bridges", "business_association_boundaries", "capital_improvement_projects_line", "capital_improvement_projects_point", "capital_improvement_projects_poly", "city_boundaries", "city_halls_region", "county_boundaries", "county_boundaries_region", "development_opportunity_areas", "enterprise_and_e_commerce_zones", "fire_stations_region", "food_carts", "freight_districts", "freight_facilities", "garbage_hauler_boundaries", "guardrails", "heritage_trees", "home_buyer_opportunity_areas", "hospitals_region", "inspected_restaurants", "intermodal_facilities", "its_cameras_intelligent_transportation_system", "its_signs_intelligent_transportation_system", "leaf_pickup", "libraries_region", "light_rail", "light_rail_stops", "local_improvement_districts", "metro_council_districts", "neighborhood_associations", "neighborhood_associations_region", "parking_meters", "parks_easements", "parks_trails", "parks_vegetation_survey", "pavement_moratorium_streets", "pedestrian_districts", "schools_region", "snow_ice_routes", "streets_jobs_contract_jobs_line", "streets_jobs_contract_jobs_points", "streets_jobs_permit_jobs_line", "streets_jobs_permit_jobs_points", "streets_jobs_permit_jobs_polygon", "streets_local_improvement_district", "traffic_calming_devices", "traffic_signals", "transit_district_poly", "transit_stations", "trimet_bus_system_routes", "trimet_bus_system_stops", "trimet_park_and_ride_lots", "trimet_transit_centers", "tsp_district_boundaries", "urban_renewal_areas", "watershed_sub_watershed_info", "wellhead_protection_area", "zip_codes", "zip_codes_region", "zoning_anno"];
+        $(function() {
+          var options = $('#dataset');
+          $.each(datasets, function(index,dataset){
+            $(options).append("<option value='"+dataset+"'>"+dataset+"</option>");
+          });
+          current_dataset = $('#dataset').val();
+          
+          proj900913 = new OpenLayers.Projection("EPSG:900913"); //Spherical mercator used for google maps
+          proj4326 = new OpenLayers.Projection("EPSG:4326"); 
+          var pdxLL = new OpenLayers.LonLat(-122.69256591796875,45.4947963896697);
+          var pdxUR = new OpenLayers.LonLat(-122.552490234375,45.58136746810096);
+          pdxLL.transform( proj4326, proj900913 );
+          pdxUR.transform( proj4326, proj900913 );
+          var options = {
+                maxExtent: new OpenLayers.Bounds(pdxLL.lon,pdxLL.lat, pdxUR.lon,pdxUR.lat),          
+                restrictedExtent: new OpenLayers.Bounds(pdxLL.lon,pdxLL.lat, pdxUR.lon,pdxUR.lat),
+                numZoomLevels: 20,
+                maxResolution: 156543.0339,
+                projection: new OpenLayers.Projection("EPSG:900913"),
+                displayProjection: new OpenLayers.Projection("EPSG:4326"),
+                tileSize: new OpenLayers.Size(512,512),
+                units: "degrees",           
+                controls: []
+             };
+          map = new OpenLayers.Map('map', options);
+          var customControls = [new OpenLayers.Control.DragPan(),
+                                new OpenLayers.Control.PanZoom()];
+          for (var i=0; i<customControls.length; i++) {
+            var control = customControls[i];
+            map.addControl(control);
+            control.activate();
+          }
+          // create Google Mercator layers
+          var gmap = new OpenLayers.Layer.Google(
+            "Google Streets", // the default
+            {'sphericalMercator': true}
+          );
+          
+          map.addLayers([gmap]);
+          map.setCenter(new OpenLayers.LonLat(-122.675264,45.509162), 15);
+          
+          $('#dataset').change(function(){
+            current_dataset = $('#dataset').val();
+            showCurrentDataset();
+          });
+          
+          function showCurrentDataset() {
+            var num = map.getNumLayers();
+              for (var j=1; j<num; j++) {
+               map.removeLayer( map.layers[1] );
+              }  
+            
+            json_layer = new OpenLayers.Layer.Vector("GeoJSON", {
+                        strategies: [new OpenLayers.Strategy.BBOX()],
+                        projection: new OpenLayers.Projection("EPSG:4326"),
+                          protocol: new OpenLayers.Protocol.HTTP({
+                                           url: "http://pdxapi.com/" + current_dataset,
+                                        format: new OpenLayers.Format.GeoJSON()
+                                    })
+                        });
+
+            // Add our vector layer to the map
+            map.addLayer(json_layer);
+          }
+        });
+    </script>
+  </head>
+  <body>
+    <div id="map" class="smallmap"></div>
+    <select id="dataset"></select>
+  </body>
+</html>

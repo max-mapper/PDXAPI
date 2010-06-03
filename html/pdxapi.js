@@ -27,9 +27,9 @@ $(document).ready(function(){
   function getBikeRacks(lat, lon, count) {
     var one_block = 0.0012;
     var dataset = $('#dataset').val();
-    console.log("http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points/%5B"+ (lon + one_block) + "," + (lat + one_block) + "," + (lon - one_block) + "," + (lat - one_block) + "%5D");
+    console.log("http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points?bbox="+ (lon - one_block) + "," + (lat - one_block) + "," + (lon + one_block) + "," + (lat + one_block));
     $.ajax({
-      url: "http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points/%5B"+ (lon + one_block) + "," + (lat + one_block) + "," + (lon - one_block) + "," + (lat - one_block) + "%5D",
+      url: "http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points?bbox="+ (lon - one_block) + "," + (lat - one_block) + "," + (lon + one_block) + "," + (lat + one_block),
       dataType: 'jsonp',
       success: function(response){
         var data = response.spatial;

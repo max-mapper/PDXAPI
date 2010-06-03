@@ -71,26 +71,21 @@
         <p> Much of the data on CivicApps is in a very raw and hard to use form.
          PDX API exists to filter the data from CivicApps and provide it in the
          easiest way possible to application developers wanting to consume the data.</p>
-        <p> Currently the API supports a basic geolocation based query on a small
-         number of datasets. As more data sets get imported from CivicApps,
-         the API will become more useful.</p>
       </td>
       <td class=code>
         <h3>Example</h3>
-        <p> <strong>JQuery</strong> JSONP request to the <code>bike_racks</code> resource (bicycle lock rack locations):</p>
+        <p> <strong>JQuery</strong> JSONP request to the <code>bicycle_parking</code> resource (bicycle lock rack locations):</p>
         <div class='highlight'><pre>
-        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-          <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://www.pdxapi.com/bike_racks&quot;</span><span class="o">,</span>
-          <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="o">,</span>
-          <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.5234515</span><span class="o">,</span>
-            <span class="s2">&quot;lon&quot;</span><span class="o">:-</span><span class="mf">122.6762071</span><span class="o">,</span>
-            <span class="s2">&quot;count&quot;</span><span class="o">:</span><span class="mi">2</span>
-          <span class="p">}</span><span class="o">,</span>
-          <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-            <span class="c">// manipulate data</span>
-          <span class="p">}</span>
-        <span class="p">});</span>
+          <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+            <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://www.pdxapi.com/bicycle_parking&quot;</span><span class="p">,</span>
+            <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="p">,</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;bbox&quot;</span><span class="o">:</span><span class="s2">&quot;-122.6785969,45.5167974,-122.6763439,45.51772964&quot;</span>
+            <span class="p">},</span>
+            <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+              <span class="c1">// manipulate data</span>
+            <span class="p">}</span>
+          <span class="p">});</span></pre>
         </pre></div>
       </td>
     </tr>
@@ -99,41 +94,16 @@
         <div class="octowrap">
           <a class="octothorpe" href="#section-2">#</a>
         <h3>API</h3>
-        <p> <strong>pdxapi.com/</strong><code>resource</code><strong>?</strong><code>lat</code><strong>=latitude&amp;</strong><code>lon</code><strong>=longitude</strong></p>
-        <p> You must specify the <code>resource</code> (dataset) and supply a <code>lat</code>/<code>lon</code> pair.
-         The <code>lat</code>/<code>lon</code> pair represents the point in space that you are querying.</p>
-        <p> You may include an optional <code>count</code> parameter to specify the number
-         of results you want to be returned from the resource.</p>
+        <p> <strong>pdxapi.com/</strong><code>resource</code><strong>?</strong><code>bbox</code>=<code>x0</code>,<code>y0</code>,<code>x1</code>,<code>y1</code></p>
+        <p> You must specify the <code>resource</code> (dataset) and supply a bounding box.
+         The bounding box pair, <code>x</code> and <code>y</code>, represent the lower left and upper right points of the bounding box, respectively.</p>
         <p> You&rsquo;ll need to request the data using library that supports <a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a>,
          such as <a href="http://api.jquery.com/jQuery.getJSON/">jQuery</a>.</p>
          </div>
-      </td>
-      <td class=code>
-        <p> The JSON data that gets returned looks like this:</p>
-        <div class="highlight">
-        <pre>
-          <span class="p">[</span>
-           <span class="p">{</span><span class="s2">&quot;distance&quot;</span><span class="o">:</span><span class="mf">35.054530</span><span class="o">,</span><span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.523392</span><span class="o">,</span><span class="s2">&quot;lon&quot;</span><span class="o">:</span><span class="mf">-122.676315</span><span class="p">}</span><span class="o">,</span>
-           <span class="p">{</span><span class="s2">&quot;distance&quot;</span><span class="o">:</span><span class="mf">130.21258</span><span class="o">,</span><span class="s2">&quot;lat&quot;</span><span class="o">:</span><span class="mf">45.523720</span><span class="o">,</span><span class="s2">&quot;lon&quot;</span><span class="o">:</span><span class="mf">-122.676545</span><span class="p">}</span>
-          <span class="p">]</span>
-        </pre>
-        </div>
-        <p> The <code>distance</code> attribute is the distance in feet from the queried 
-          <code>lat</code>/<code>lon</code> pair to the respective result.</p>
-      </td>
-    </tr>
-    <tr id='section-3'>
-      <td class=docs>
-        <div class="octowrap">
-          <a class="octothorpe" href="#section-3">#</a>
-          <h3>Developers</h3>
-          <p>PDXAPI is powered by <a href="http://www.github.com/vmx/couchdb">GeoCouch</a>, a spatial index enabled flavor of CouchDB. This means that every piece of data in PDXAPI is accessible and editable through a REST-like interface, and that a revision history will be kept for each data point.</p> 
-          <p>I am in the process of creating example client applications that take advantage of the full capabilities of the platform; the eye candy at the top of this page is just a teaser.</p>
-          <p> Want to help out? Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
-           or <a href="http://www.maxogden.com">contact me</a> if you are interested.</p>
-          </div>
-          
-        </div>
+         <p>PDXAPI is powered by <a href="http://www.github.com/vmx/couchdb">GeoCouch</a>, a spatial index enabled flavor of CouchDB. This means that every piece of data in PDXAPI is accessible and editable through a REST-like interface.</p> 
+         <p>I am in the process of creating example client applications that take advantage of the full capabilities of the platform; the eye candy at the top of this page is just a teaser.</p>
+         <p> Want to help out? Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
+          or <a href="http://www.maxogden.com">contact me</a> if you are interested.</p>
       </td>
       <td class=code>
         <h3>Datasets</h3>
@@ -229,14 +199,4 @@
     </tr>
     </table>
 </div>
-<script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-  try {
-  var pageTracker = _gat._getTracker("UA-15477568-1");
-  pageTracker._trackPageview();
-  } catch(err) {}
-</script>
 </body>
