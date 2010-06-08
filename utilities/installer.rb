@@ -1,17 +1,10 @@
-# KNOWN BUG: SHAPEFILES CONTAINING NULL DATE VALUES WILL THROW CRAZY ERRORS. DOES ANYONE KNOW HOW TO MAKE POSTGRES MORE FAULT TOLERANT OF NULL DATE VALUES?
-# ERROR DUMP:
-  # ERROR:  date/time field value out of range: "0"
-  # LINE 1: ...trfullnam","expr1",geometry) VALUES ('1','1',NULL,'0',NULL,'...
-  #                                                              ^
-  # HINT:  Perhaps you need a different "datestyle" setting.
-#
-# -------------------
-# this will populate a postgis database called 'civicapps' with all of the shapefiles from datasets.yml
 # inspired by http://iknuth.com/2010/05/bulk-loading-shapefiles-into-postgis/
+# this will populate a postgis database called 'civicapps' with all of the shapefiles from datasets.yml
+# you will have to create the database. see the linked iknuth article for instructions
 #
-# requires binaries: wget, unzip, ogr2ogr, shp2pgsql VERSION 2.0+ src: http://postgis.refractions.net/download/postgis-2.0.0SVN.tar.gz
+# requires binaries: wget, unzip, ogr2ogr (via gdal_bin package usually) and (important!:) shp2pgsql VERSION 2.0+ src: http://postgis.refractions.net/download/postgis-2.0.0SVN.tar.gz
 #
-# usage: CivicAppsShapefiles.new.install!
+# usage: place this file in your desired data location and require this file and execute in irb: CivicAppsShapefiles.new.install!
 
 require 'yaml'
 
@@ -69,6 +62,7 @@ class CivicAppsShapefiles
     end
   end
   
+  # There are a number of null datetime fields in CivicApps data that blow up when they are entered into postgres. This converts them to varchar fields instead
   def fix_dates
     Dir[File.join( @base_dir, "**/*.sql" )].each do |sql_dump|
       puts "Fixing dates in #{sql_dump.split('.sql')[0]}..."
