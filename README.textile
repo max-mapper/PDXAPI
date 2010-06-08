@@ -2,7 +2,7 @@
 
 h2. About
 
-PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org. There are utilities included to convert legacy GIS data such as Shapefiles and load them into CouchDB. Out of the box CouchDB provides a RESTy JSONP API to all of the data.
+PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org. There are utilities included to convert legacy GIS data such as Shapefiles and load them into CouchDB. Out of the box CouchDB provides a RESTy JSON API to all of the data.
 
 h2. Using the API
 
@@ -10,7 +10,7 @@ p. See "pdxapi.com":http://pdxapi.com for more information and example usage.
 
 h2. Project Goals
 
-* create an easily consumable data resource for developers interested in utilizing portland civic data
+* create an easily consumable data resource for developers interested in utilizing Portland civic data
 * modify and build upon the city's publicly released data by allowing users to edit and contribute data, and even start whole new datasets
 * create automated processes for synchronizing pdxapi with the original data sources (City of Portland, Metro, TriMet)
 * create tools and examples for developers to use as a jumping off point for creating 'civic apps'
@@ -18,9 +18,9 @@ h2. Project Goals
 
 h2. Developers
 
-p. If you want to play around with a local instance, the easiest way to get data from CivicApps is to download lokkju's "pyspatialite":http://code.google.com/p/pyspatialite/ and "pyod":http://code.google.com/p/pyod/ to populate a spatialite enabled .sqlite database with CivicApps data. It should weigh in at around 700mb.
+p. If you want to play around with a local copy of the data, the easiest way to get data from CivicApps is to download all of the datasets into a PostGIS instance. See the @installer.rb@ utility for instructions on how to load a database with CivicApps data.
 
-p. You can use the @spatialiteexport@ and @wkt2geojson@ utilities to take the data from spatialite and generate a json file for each dataset. You can then use the @couchpush@ utility to load the YAML files into CouchDB
+p. You can use the @postgis_export@ utility to take the data from PostGIS and generate a json file for each dataset. You can then use the @couchpush@ utility to load the JSON files into CouchDB
 
 h2. To-do
 
