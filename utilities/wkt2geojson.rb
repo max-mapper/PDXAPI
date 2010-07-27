@@ -1,7 +1,10 @@
+# NOTICE: this isn't in use, but is included here for reference
 #
 # this demonstrates how to convert lots of well known text based objects into geojson
 # it operates on a bunch of yaml files that each contains an array of geo-object hashes. 
 # any geo-objects with the key 'geometry' and the value == a string of wkt will be converted into geojson
+#
+# note: this will create invalid polygons
 #
 # an example: 
 # geometry: POINT(-122.663408 45.719247)

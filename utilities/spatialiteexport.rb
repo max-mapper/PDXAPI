@@ -1,4 +1,9 @@
+#
+# NOTICE: This isn't being used anymore because PostGIS is more fault tolerant towards large datasets. The source is included here for reference.
+# ---------
+#
 # USAGE: use lokkju's http://code.google.com/p/pyspatialite/ and http://code.google.com/p/pyod/ to populate a spatialite enabled .sqlite database with civicapps data. should weigh in at around 700mb
+#
 
 require 'sqlite3' # see http://rails.nomad-labs.com/?p=34 for installation instructions
 require 'ap'
