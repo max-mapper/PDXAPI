@@ -2,7 +2,7 @@
 
 h2. About
 
-PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org. There are utilities included to convert legacy GIS data such as Shapefiles and load them into CouchDB. Out of the box CouchDB provides a RESTy JSON API to all of the data.
+PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org.  Out of the box CouchDB provides a RESTy JSON API to all of the data.
 
 h2. Project Goals
 
@@ -10,24 +10,19 @@ h2. Project Goals
 * Modify and build upon the city's publicly released data by allowing users to edit and contribute data, and even start whole new datasets
 * Create automated processes for synchronizing with the original data sources (City of Portland, Metro, TriMet)
 * Create tools and examples for developers to use as a jumping off point for creating 'civic apps'
-* Emphasize wiki-style revision history and conflict management/dispute resolution when users contribute to datasets
+* Wiki-style revision history and conflict management/dispute resolution when users contribute to datasets
 
 h2. Developers
 
 p. See "pdxapi.com":http://pdxapi.com for more information and example usage.
 
-p. Note: GeoCouch is still under active development and may act wonky sometimes. Certain datasets are more cumbersome than others. As GeoCouch matures this will be less of an issue. To view the data in GeoCouch directly you can visit "http://data.pdxapi.com/_utils":http://data.pdxapi.com/_utils
-
 p. The basic usage is to ask PDXAPI for all objects in a database contained within a particular bounding box. You can see an example of this on the PDXAPI.com homepage. You will receive a GeoJSON feature collection that contains any matching objects. Each object consists of some location data and an ID that you can use to look up metadata for the object by asking http://pdxapi.com/@dataset@/@id@
 
-p. If you are the first to ask for a particular query inside of a dataset, you may experience a delay before your first query is returned. This is because GeoCouch is building a spatial index on the geometry contained within the dataset. I have attempted to prune out the datasets that break GeoCouch. If you feel that a dataset is not responding correctly, email me and I will be happy to investigate.
-
-p. If you want to play around with a local copy of the data, the easiest way to get data from CivicApps is to download all of the datasets into a PostGIS instance. See the @installer.rb@ utility for instructions on how to load a database with CivicApps data.
-
-p. You can use the @postgis_export@ utility to take the data from PostGIS and generate a json file for each dataset. You can then use the @couchpush@ utility to load the JSON files into CouchDB
+p. If you are interested in working with a local instance of PDXAPI, the included @pdxapi_installer@ file demonstrates how to convert download Shapefiles from CivicApps and load them into GeoCouch. The @old_scripts@ directory contains a bunch of geospatial related utilities developed for PDXAPI that are no longer in use, but may be useful as a reference.
 
 h2. Related Projects
 
+* "shp2geocouch":http://github.com/maxogden/shp2geocouch is a rubygem that converts Shapefiles into GeoCouch databases.
 * "Food Cart Pages":http://foodcartpages.com is an example web application that uses PDXAPI as it's data store.
 * "Food Cart Finder Mobile":http://github.com/maxogden/pdx-food-carts-mobile is an example mobile application (native iPhone and Android) that uses PDXAPI as it's data store.
 
