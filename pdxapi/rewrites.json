@@ -38,6 +38,10 @@
     "from": ""
   },
   {
+    "to": "pages/preview.html",
+    "from": "/preview.html"
+  },
+  {
     "to": "pages/*.html",
     "from": "*.html"
   },
