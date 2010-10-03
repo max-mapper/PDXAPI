@@ -14,15 +14,17 @@ h2. Project Goals
 
 h2. Developers
 
-p. This repository hosts the CouchDB web application (CouchApp) that powers PDXAPI. The only dependency for hosting your own PDXAPI-like geo-server is GeoCouch. The @pdxapi@ folder contains the full "CouchApp":http://github.com/couchapp/couchapp for you to tweak and deploy.
+p. This repository hosts two separate things... the CouchDB web application (CouchApp) that powers PDXAPI and also some helpful utilities for converting and uploading geographic data into GeoCouch. The only dependency for hosting your own PDXAPI-like geo-server is GeoCouch. The @pdxapi@ folder contains the full "CouchApp":http://github.com/couchapp/couchapp for you to tweak and deploy.
 
-p. If you want to actually use the API, see "pdxapi.com":http://pdxapi.com for more information and example usage.
+p. If you want to actually use PDXAPI, see "pdxapi.com":http://pdxapi.com for more information and example usage.
 
 p. The basic usage is to ask PDXAPI for all objects in a database contained within a particular bounding box. You can see an example of this on the PDXAPI.com homepage. You will receive a GeoJSON feature collection that contains any matching objects. Each object consists of some location data and an ID that you can use to look up metadata for the object by asking http://pdxapi.com/@dataset@/@id@
 
 p. If you are interested in working with a local copy of some PDXAPI data, the easiest way is to set up your own GeoCouch and replicate the datasets that you want using CouchDB's built in replicator tool.
 
-p. The @old_scripts@ directory contains a bunch of geospatial related utilities developed for PDXAPI that are no longer in use, but may be useful as a reference.
+p. The @utilities@ directory contains a bunch of geospatial related utilities developed for PDXAPI that are no longer in use, but may be useful as a reference.
+
+p. @datasets.yml@ is a dataset containing information and metadata for all of Portland's municipal datasets.
 
 h2. Importing geo data into GeoCouch
 
