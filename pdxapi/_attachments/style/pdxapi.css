@@ -1,0 +1,24 @@
+#map {
+  width: 100%;
+  height: 300px; }
+  
+.map_button {
+  z-index: 666;
+  background-color: #FFF;
+  border: 1px solid #000;
+  position: absolute;
+  padding: 0px 5px;
+  top: 5px;
+  right: 5px;
+  cursor:hand;
+  cursor:pointer;
+}
+.map_button:active{
+  top: 6px;
+}
+#dataset {
+  position: absolute;
+  top: 9px;
+  right: 110px;
+}
+

@@ -1,8 +1,8 @@
-<h1>PDX API</h1> JSONP API for Portland, OR civic data
+<h1>PDX API</h1> JSON API for Portland, OR civic data
 
 h2. About
 
-PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org.  Out of the box CouchDB provides a RESTy JSON API to all of the data.
+PDXAPI is a "GeoCouch":http://www.github.com/vmx/couchdb instance populated with data from the City of Portland, Oregon through "CivicApps":http://www.civicapps.org.  Out of the box CouchDB provides a RESTy JSONP capable API to all of the data.
 
 h2. Project Goals
 
@@ -14,11 +14,21 @@ h2. Project Goals
 
 h2. Developers
 
-p. See "pdxapi.com":http://pdxapi.com for more information and example usage.
+p. This repository hosts the CouchDB web application (CouchApp) that powers PDXAPI. The only dependency for hosting your own PDXAPI-like geo-server is GeoCouch. The @pdxapi@ folder contains the full "CouchApp":http://github.com/couchapp/couchapp for you to tweak and deploy.
+
+p. If you want to actually use the API, see "pdxapi.com":http://pdxapi.com for more information and example usage.
 
 p. The basic usage is to ask PDXAPI for all objects in a database contained within a particular bounding box. You can see an example of this on the PDXAPI.com homepage. You will receive a GeoJSON feature collection that contains any matching objects. Each object consists of some location data and an ID that you can use to look up metadata for the object by asking http://pdxapi.com/@dataset@/@id@
 
-p. If you are interested in working with a local instance of PDXAPI, the included @pdxapi_installer@ file demonstrates how to convert download Shapefiles from CivicApps and load them into GeoCouch. The @old_scripts@ directory contains a bunch of geospatial related utilities developed for PDXAPI that are no longer in use, but may be useful as a reference.
+p. If you are interested in working with a local copy of some PDXAPI data, the easiest way is to set up your own GeoCouch and replicate the datasets that you want using CouchDB's built in replicator tool.
+
+p. The @old_scripts@ directory contains a bunch of geospatial related utilities developed for PDXAPI that are no longer in use, but may be useful as a reference.
+
+h2. Importing geo data into GeoCouch
+
+p. GeoCouch can store, index and serve GeoJSON. There are awesome tools like @ogr2ogr@ that are capable of converting many different formats into GeoJSON.
+
+p. I wrote a tool called "shp2geocouch":http://github.com/maxogden/shp2geocouch for easily importing Shapefiles into GeoCouch. See my "blog post":http://maxogden.com/#/2010-08-14-loading-shapefiles-into-geocouch.html for a tutorial on this process.
 
 h2. Related Projects
 

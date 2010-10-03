@@ -1,0 +1,16 @@
+#map { float:left; width:75%; height:100%; }
+#message { position:absolute; padding:10px; background:#555; color:#fff; width:75px; }
+#list { float:left; width:200px; background:#eee; list-style:none; padding:0; }
+#list li { padding:10px; }
+#list li:hover { background:#555; color:#fff; cursor:pointer; cursor:hand; }
+#OpenLayers.Control.PanZoom_5_zoomworld {display:none;}
+#menu {width: 25%; height: 100%; float: right; overflow: auto;}
+#databases { list-style-type: none;}
+#databases li:hover { font-weight: bold; cursor: pointer; cursor: hand;}
+#loader {
+	position: absolute;
+	display: none;
+	z-index: 666;
+}
+.selected {font-weight: bold;}
+h1 { margin: 40px 35px 15px;}

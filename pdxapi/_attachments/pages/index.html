@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="google-site-verification" content="ML0bI9JgK05osGY-U9p5ql7IGo8U55nl79yWYM-dE08" />
+  <title>PDX API</title>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAUXDSXET8IRGdgHP9FpGw5BQUnAEC-djyl-EUAJMAV_WqsyU6zxRQHulMG6S-_rFLddlTXHdU2FcaRQ" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="script/pdxapi.js"></script>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+  <link rel="stylesheet" href="style/pdxapi.css">
+</head>
+<body>
+  <div id='container'>
+    <div id="background"></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <div id="map"></div>
+      <div id="fullscreen" class="map_button">view larger</div>
+
+      <tr>
+        <th class=docs><h1>PDX API</h1></th>
+        <td class=code>
+          <code><i>Drag the map around to explore bike rack locations</i></code>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr id='section-1'>
+        <td class=docs>
+          <div class="octowrap">
+            <a class="octothorpe" href="#section-1">#</a>
+          </div>
+          <p><strong>Follow me on twitter if you want to stay up to date: <a href='http://www.twitter.com/maxogden'>@maxogden</a></strong></p>
+          <p> <strong>PDXAPI</strong> is a JSON API that provides access to data from <a href="http://www.civicapps.org">CivicApps</a>,
+           the open data initiative by the City of Portland.</p>
+
+          <p> Much of the data on CivicApps is in a very raw and hard to use form.
+           PDX API exists to filter the data from CivicApps and provide it in the
+           easiest way possible to application developers wanting to consume the data.</p>
+        </td>
+        <td class=code>
+          <h3>Example</h3>
+          <p> <strong>JQuery</strong> JSONP request to the <code>bicycle_parking</code> resource (bicycle lock rack locations):</p>
+
+          <div class='highlight'><pre>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+              <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://data.pdxapi.com/bicycle_parking/_design/geojson/_spatial/points&quot;</span><span class="p">,</span>
+              <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="p">,</span>
+
+              <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;bbox&quot;</span><span class="o">:</span><span class="s2">&quot;-122.6785969,45.5167974,-122.6763439,45.51772964&quot;</span>
+              <span class="p">},</span>
+              <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+
+                <span class="c1">// manipulate data</span>
+              <span class="p">}</span>
+            <span class="p">});</span></pre>
+          </pre></div>
+        </td>
+      </tr>
+      <tr id='section-2'>
+
+        <td class=docs>
+          <div class="octowrap">
+            <a class="octothorpe" href="#section-2">#</a>
+          <h3>API</h3>
+          <p> <strong>data.pdxapi.com/</strong><code>resource</code>/_design/geojson/_spatial/points<strong>?</strong><code>bbox</code>=<code>x0</code>,<code>y0</code>,<code>x1</code>,<code>y1</code></p>
+
+          <p> You must specify the <code>resource</code> (dataset) and supply a bounding box.
+           The bounding box pair, <code>x</code> and <code>y</code>, represent the lower left and upper right points of the bounding box, respectively.</p>
+          <p> You&rsquo;ll need to request the data using library that supports <a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a>,
+           such as <a href="http://api.jquery.com/jQuery.getJSON/">jQuery</a>.</p>
+
+           </div>
+           <p>PDXAPI is powered by <a href="http://www.github.com/vmx/couchdb">GeoCouch</a>, a spatial index enabled flavor of CouchDB. This means that every piece of data in PDXAPI is accessible and editable through a REST-like interface.</p> 
+           <p>I am in the process of creating example client applications that take advantage of the full capabilities of the platform; the eye candy at the top of this page is just a teaser.</p>
+           <p> Want to help out? Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
+            or <a href="http://www.maxogden.com">contact me</a> if you are interested.</p>
+
+        </td>
+        <td class=code>
+          <h3>Datasets</h3>
+  				<p><a href='http://www.pdxapi.com/preview.html'>Launch the dataset previewer</a></p>
+          <p> Datasets currently available through PDX API:</p>
+          <p> 
+            <pre>
+
+              bicycle_network
+              bicycle_parking
+              bridges
+              business_associations
+              buslines
+              busstops
+              cities
+              cityhall
+              co_fill
+              council
+              counties
+              cty_fill
+              curb_ramps
+              day_street_sweeping
+              development_opp_areas
+              enterprise_ecommerce_zone
+              fire_sta
+              food_carts
+              freight_districts
+              freight_facilities
+              guardrails
+              hauler
+              heritage_trees
+              homebuyer_opp_area
+              hospital
+              inspected_restaurants
+              intermodal_facilities
+              its_cameras
+              its_signs
+              leaf_pickup
+              library
+              lid_boundaries
+              lid_streets
+              lrt_line
+              lrt_stop
+              nbo_hood
+              neighborhoods
+              night_street_sweeping
+              parking_meters
+              parkride
+              parks
+              parks_desired_fut_cond
+              parks_easements
+              parks_taxlots
+              parks_trails
+              parks_vegetation_survey
+              pavement_moratorium
+              pedestrian_districts
+              public_art
+              schools
+              sidewalks
+              signage_lighting_imp_prog
+              snow_ice_routes
+              storefront_improvement_areas
+              street_contract_jobs
+              street_permit_jobs_line
+              streets_permit_jobs_point
+              streets_permit_jobs_polygon
+              traffic_calming
+              traffic_signals
+              tran_cen
+              transit_district
+              transit_stations
+              tsp_district_boundaries
+              urban_renewal_area
+              vegetation
+              watershed
+              wellheadprotarea
+              zipcode
+              zipcodes
+            </pre>
+          </p>
+        </td>
+      </tr>
+      </table>
+  </div>
+</body>

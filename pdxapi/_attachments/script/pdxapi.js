@@ -20,19 +20,15 @@ $(document).ready(function(){
     $('#smallscreen').attr("id", "fullscreen");
   });
 
-  $('#dataset').change(function(){
-    updateBikeRacks();
-  });
   
   function getBikeRacks(lat, lon, count) {
     var one_block = 0.0012;
-    var dataset = $('#dataset').val();
-    console.log("http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points?bbox="+ (lon - one_block) + "," + (lat - one_block) + "," + (lon + one_block) + "," + (lat + one_block));
+    var dataset = 'bicycle_parking';
     $.ajax({
-      url: "http://data.pdxapi.com:5984/" + dataset + "/_design/main/_spatial/points?bbox="+ (lon - one_block) + "," + (lat - one_block) + "," + (lon + one_block) + "," + (lat + one_block),
+      url: "http://data.pdxapi.com:5984/" + dataset + "/_design/geojson/_spatial/points?bbox="+ (lon - one_block) + "," + (lat - one_block) + "," + (lon + one_block) + "," + (lat + one_block),
       dataType: 'jsonp',
       success: function(response){
-        var data = response.spatial;
+        var data = response.rows;
         map.clearOverlays();
         var markers = [];
         $.each(data, function(i,point) {
@@ -53,7 +49,7 @@ $(document).ready(function(){
   map = new GMap2($("#map").get(0));
   
   var bikeRack = new GIcon();
-  bikeRack.image = 'bikerack.png';
+  bikeRack.image = 'images/bikerack.png';
   bikeRack.iconSize = new GSize(30,44);
   bikeRack.iconAnchor = new GPoint(15,44);
   bikeRack.infoWindowAnchor = new GPoint(15,0);
