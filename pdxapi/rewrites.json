@@ -38,8 +38,16 @@
     "from": ""
   },
   {
-    "to": "pages/*.html",
-    "from": "*.html"
+    "to": "../../../:db/_design/geojson/_spatial/points",
+    "from": ":db/geojson"
+  },
+  {
+    "to": "../../../:db/:id",
+    "from": ":db/:id"
+  },
+  {
+    "to": "pages/preview.html",
+    "from": "preview.html"
   },
   {
     "to": "../../",

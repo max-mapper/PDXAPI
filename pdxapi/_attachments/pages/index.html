@@ -3,7 +3,7 @@
 <head>
   <meta name="google-site-verification" content="ML0bI9JgK05osGY-U9p5ql7IGo8U55nl79yWYM-dE08" />
   <title>PDX API</title>
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAUXDSXET8IRGdgHP9FpGw5BQUnAEC-djyl-EUAJMAV_WqsyU6zxRQHulMG6S-_rFLddlTXHdU2FcaRQ" type="text/javascript"></script>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAUXDSXET8IRGdgHP9FpGw5BT-fVzUWGS_eJ2ZLPBO_6yPqTi0vhQKAzahOrduDq0xQk09GR-UP3Jgcg" type="text/javascript"></script>
   <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="script/pdxapi.js"></script>
   <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
@@ -45,7 +45,7 @@
 
           <div class='highlight'><pre>
             <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-              <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://data.pdxapi.com/bicycle_parking/_design/geojson/_spatial/points&quot;</span><span class="p">,</span>
+              <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://pdxapi.com/bicycle_parking/geojson&quot;</span><span class="p">,</span>
               <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="p">,</span>
 
               <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
@@ -65,7 +65,7 @@
           <div class="octowrap">
             <a class="octothorpe" href="#section-2">#</a>
           <h3>API</h3>
-          <p> <strong>data.pdxapi.com/</strong><code>resource</code>/_design/geojson/_spatial/points<strong>?</strong><code>bbox</code>=<code>x0</code>,<code>y0</code>,<code>x1</code>,<code>y1</code></p>
+          <p> <strong>pdxapi.com/</strong><code>resource</code>/geojson<strong>?</strong><code>bbox</code>=<code>x0</code>,<code>y0</code>,<code>x1</code>,<code>y1</code></p>
 
           <p> You must specify the <code>resource</code> (dataset) and supply a bounding box.
            The bounding box pair, <code>x</code> and <code>y</code>, represent the lower left and upper right points of the bounding box, respectively.</p>

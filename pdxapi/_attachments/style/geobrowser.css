@@ -4,13 +4,47 @@
 #list li { padding:10px; }
 #list li:hover { background:#555; color:#fff; cursor:pointer; cursor:hand; }
 #OpenLayers.Control.PanZoom_5_zoomworld {display:none;}
-#menu {width: 25%; height: 100%; float: right; overflow: auto;}
+#sidebar {width: 25%; height: 100%; float: right; overflow: auto;}
 #databases { list-style-type: none;}
 #databases li:hover { font-weight: bold; cursor: pointer; cursor: hand;}
-#loader {
-	position: absolute;
-	display: none;
-	z-index: 666;
+#loader { position: absolute; display: none; z-index: 666; }
+form {padding: 0; margin: 0;}
+.selected {font-weight: bold; color: #019DBE;}
+.geocoder {width: 200px; position: absolute; z-index: 999; left: 55px; top: 10px; border: 2px solid black;}
+h3 {font-size: 20px; padding: 0; margin: 0;}
+#metadata { height: 50%; overflow: auto; margin-left: 10px; margin-top: 10px;}
+#menu { height: 50%; overflow: auto; margin-left: 10px;}
+body {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #252519;
+  margin: 0; padding: 0;
 }
-.selected {font-weight: bold;}
-h1 { margin: 40px 35px 15px;}
+a {
+  color: #261a3b;
+}
+  a:visited {
+    color: #261a3b;
+  }
+
+dl {
+	float: left;
+	width: 100%;
+	margin: 1em 0;
+	padding: 0;
+}
+
+dt {
+	clear: left;
+	float: left;
+	margin: 0;
+	padding: 5px;
+	font-weight: bold;
+}
+
+dd {
+	float: left;
+	margin: 0;
+	padding: 5px;
+}
