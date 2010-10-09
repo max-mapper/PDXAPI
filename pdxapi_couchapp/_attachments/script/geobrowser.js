@@ -49,6 +49,8 @@ var Map = function() {
       $.each(data, function(key, val) {
         if (typeof(val) == 'string' && key[0] != '_') {
           out = out + '<dt>' + key + '<dd>' + val;
+        } else if (typeof(val) == 'object') {
+          out = out + '<dt>' + key + '<dd>' + val.join(', ');
         }
       });
       out = out + '</dl>';
@@ -72,8 +74,7 @@ var Map = function() {
     fetchDatasetMetadata: function(dataset) {
       Map.clearMetadata(dataset);
       $.ajax({
-        // TODO: Dataset metadata?
-        url: Map.couchUrl + Map.currentDataset,
+        url: Map.couchUrl + "pdxapi/" + Map.currentDataset,
         dataType: 'jsonp',
         success: function(data){
           $('#metadata').html("<h3>Dataset Metadata</h3>"+
@@ -127,11 +128,11 @@ $(function() {
     success: function(databases){
       var dbList = $('#databases');
       $.each(databases.sort(), function(index, database){
-              if (database !== "_users" && database !== "_replicator") {
+        if (database !== "_users" && database !== "_replicator") {
           dbList.append('<li>' + database + '</li>');
-              }
-              $('#databases li:first').click();
+        }
       });
+      $('#databases li:first').click();
     }
   });
 

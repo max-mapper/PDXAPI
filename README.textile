@@ -14,7 +14,7 @@ h2. Project Goals
 
 h2. Developers
 
-p. This repository hosts two separate things... the CouchDB web application (CouchApp) that powers PDXAPI and also some helpful utilities for converting and uploading geographic data into GeoCouch. The only dependency for hosting your own PDXAPI-like geo-server is GeoCouch. The @pdxapi@ folder contains the full "CouchApp":http://github.com/couchapp/couchapp for you to tweak and deploy.
+p. This repository hosts two separate things... the CouchDB web application (CouchApp) that powers PDXAPI and also some helpful utilities for converting and uploading geographic data into GeoCouch. The only dependency for hosting your own PDXAPI-like geo-server is GeoCouch. The @pdxapi_couchapp@ folder contains the full "CouchApp":http://github.com/couchapp/couchapp for you to tweak and deploy.
 
 p. If you want to actually use PDXAPI, see "pdxapi.com":http://pdxapi.com for more information and example usage.
 
