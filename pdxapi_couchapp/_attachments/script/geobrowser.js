@@ -127,7 +127,7 @@ $(function() {
     success: function(databases){
       var dbList = $('#databases');
       $.each(databases.sort(), function(index, database){
-        if (database !== "_users" && database !== "_replicator") {
+        if (database[0] !== "_" && database !== "pdxapi") {
           dbList.append('<li>' + database + '</li>');
         }
       });
