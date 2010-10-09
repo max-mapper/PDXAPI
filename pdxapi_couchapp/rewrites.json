@@ -47,6 +47,10 @@
   },
   {
     "to": "pages/preview.html",
+    "from": "preview"
+  },
+  {
+    "to": "pages/preview.html",
     "from": "preview.html"
   },
   {

@@ -1,6 +1,5 @@
 var GeoJSONHelper = function() {
   return {
-    // map borrowed from http://github.com/janl/mustache.js/blob/master/mustache.js
     collect_geometries : function(geometries) {
       if (geometries.type == 'GeometryCollection')
         return geometries;
@@ -49,7 +48,7 @@ var Map = function() {
       $.each(data, function(key, val) {
         if (typeof(val) == 'string' && key[0] != '_') {
           out = out + '<dt>' + key + '<dd>' + val;
-        } else if (typeof(val) == 'object') {
+        } else if (typeof(val) == 'object' && key != "geometry" && val != null) {
           out = out + '<dt>' + key + '<dd>' + val.join(', ');
         }
       });
@@ -201,7 +200,7 @@ $(function() {
 
   Map.geojson_format = new OpenLayers.Format.GeoJSON();     
 
-  Map.container.setCenter(new OpenLayers.LonLat(-122.6762071,45.5234515));
+  Map.container.setCenter(new OpenLayers.LonLat(-122.6762071,45.5234515), 1);
   Map.container.events.register( 'moveend', this, function(){ Map.fetchFeatures() });
 
   if (OpenLayers.Control.MultitouchNavigation) {
