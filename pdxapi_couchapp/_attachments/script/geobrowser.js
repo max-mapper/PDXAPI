@@ -157,7 +157,7 @@ $(function() {
     ]
   };
   Map.container = new OpenLayers.Map('map', Map.options);
-  Map.gmap = new OpenLayers.Layer.Google("Google Streets", {"sphericalMercator": true, MIN_ZOOM_LEVEL: 16, MAX_ZOOM_LEVEL: 21}); 
+  Map.gmap = new OpenLayers.Layer.Google("Google Streets", {"sphericalMercator": true, MIN_ZOOM_LEVEL: 14, MAX_ZOOM_LEVEL: 21}); 
   Map.container.addLayer(Map.gmap);
 
   Map.styleMap = new OpenLayers.StyleMap({
@@ -200,7 +200,7 @@ $(function() {
 
   Map.geojson_format = new OpenLayers.Format.GeoJSON();     
 
-  Map.container.setCenter(new OpenLayers.LonLat(-122.6762071,45.5234515), 1);
+  Map.container.setCenter(new OpenLayers.LonLat(-122.6762071,45.5234515), 3);
   Map.container.events.register( 'moveend', this, function(){ Map.fetchFeatures() });
 
   if (OpenLayers.Control.MultitouchNavigation) {
@@ -213,8 +213,8 @@ $(function() {
     var dataset = $(this).text();
     $('.selected').removeClass('selected');
     $(this).addClass('selected');
-    Map.fetchDatasetMetadata(dataset);
     Map.currentDataset = dataset;
+    Map.fetchDatasetMetadata(dataset);
     Map.fetchFeatures();
   });
 });

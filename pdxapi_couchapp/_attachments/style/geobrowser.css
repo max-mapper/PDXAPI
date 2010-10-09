@@ -10,7 +10,8 @@
 #loader { position: absolute; display: none; z-index: 666; }
 form {padding: 0; margin: 0;}
 .selected {font-weight: bold; color: #019DBE;}
-.geocoder {width: 200px; position: absolute; z-index: 999; left: 55px; top: 10px; border: 2px solid black;}
+.geocoder_form {width: 300px; position: absolute; z-index: 999; left: 55px; top: 10px;}
+.geocoder {width: 200px; border: 1px solid black;}
 h3 {font-size: 20px; padding: 0; margin: 0;}
 #metadata { height: 50%; overflow: auto; margin-left: 10px; margin-top: 10px;}
 #menu { height: 50%; overflow: auto; margin-left: 10px;}
