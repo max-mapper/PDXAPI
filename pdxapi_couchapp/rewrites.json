@@ -38,6 +38,10 @@
     "from": ""
   },
   {
+    "to": "pages/911feedexample.html",
+    "from": "911feedexample"
+  },
+  {
     "to": "../../../:db/_design/geojson/_spatial/points",
     "from": ":db/geojson"
   },

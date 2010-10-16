@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type='text/css'>
+      .stream {font-size: 12px;}
+      .stream a {
+        color: #556270;
+        color: #107fc9;
+        color: #019dbe;
+        text-decoration: none; }
+        a:hover {
+          color: white;
+          background-color: #556270;
+          background-color: #019dbe; }
+
+      ul.stream {
+        margin: 0;
+        padding: 2em; }
+        ul.stream > li {
+          min-height: 50px;
+          list-style: none;
+          padding: 12px 0;
+          border-bottom: 1px solid #eeeeee; }
+        ul.stream > li:first-child {
+          padding-top: 0; }
+
+      li.message {
+        position: relative;
+        line-height: 140%;
+        font-family: "Lucida Grande", sans-serif;
+        color: #999999; }
+        li.message .avatar {
+          float: left;
+          margin-right: 15px; }
+        li.message .delete:hover {
+          background: #eeeeee; }
+        li.message .content {
+          padding-left: 65px; }
+          li.message .content span.from {
+            color: black;
+            font-weight: normal;
+            font-size: 110%; }
+          li.message .content div.info {
+            color: #bababa;
+            font-size: 70%; }
+    </style>
+  </head>
+  <body>
+    <div id="bubbrubb">
+    </div>
+    <script type="text/javascript">
+        var feeds = ['http://pdxapi.com/pdx911/feed?descending=true&limit=5'];
+    </script>
+    <script src="/script/bubbrubb_an_lilsis.js" type="text/javascript"></script>
+  </body>
+</html>
+
