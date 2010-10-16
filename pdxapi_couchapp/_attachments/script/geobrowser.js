@@ -49,7 +49,13 @@ var Map = function() {
         if (typeof(val) == 'string' && key[0] != '_') {
           out = out + '<dt>' + key + '<dd>' + val;
         } else if (typeof(val) == 'object' && key != "geometry" && val != null) {
-          out = out + '<dt>' + key + '<dd>' + val.join(', ');
+          if (key == 'properties') {
+            $.each(val, function(attr, value){
+              out = out + '<dt>' + attr + '<dd>' + value;
+            })
+          } else {
+            out = out + '<dt>' + key + '<dd>' + val.join(', ');
+          }
         }
       });
       out = out + '</dl>';

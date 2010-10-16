@@ -28,12 +28,9 @@
 
       <tr id='section-1'>
         <td class=docs>
-          <div class="octowrap">
-            <a class="octothorpe" href="#section-1">#</a>
-          </div>
           <p><strong>Follow me on twitter if you want to stay up to date: <a href='http://www.twitter.com/maxogden'>@maxogden</a></strong></p>
-          <p> <strong>PDXAPI</strong> is a JSON API that provides access to data from <a href="http://www.civicapps.org">CivicApps</a>,
-           the open data initiative by the City of Portland.</p>
+          <p> <strong>PDXAPI</strong> is a JSON API that provides access to geographic and real time data from Portland, OR. Most of the data originates from <a href="http://www.civicapps.org">CivicApps</a>,
+           the regional Portland area open data initiative.</p>
 
           <p> Much of the data on CivicApps is in a very raw and hard to use form.
            PDX API exists to filter the data from CivicApps and provide it in the
@@ -47,12 +44,10 @@
             <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
               <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://pdxapi.com/bicycle_parking/geojson&quot;</span><span class="p">,</span>
               <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="p">,</span>
-
               <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
                 <span class="s2">&quot;bbox&quot;</span><span class="o">:</span><span class="s2">&quot;-122.6785969,45.5167974,-122.6763439,45.51772964&quot;</span>
               <span class="p">},</span>
               <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-
                 <span class="c1">// manipulate data</span>
               <span class="p">}</span>
             <span class="p">});</span></pre>
@@ -65,16 +60,17 @@
           <div class="octowrap">
             <a class="octothorpe" href="#section-2">#</a>
           <h3>API</h3>
-          <p> <strong>pdxapi.com/</strong><code>resource</code>/geojson<strong>?</strong><code>bbox</code>=<code>x0</code>,<code>y0</code>,<code>x1</code>,<code>y1</code></p>
+          <p> <strong>pdxapi.com/</strong><code>resource</code>/<code>datatype</code><strong>?</strong><code>bbox</code>=<code>x0</code>,<code>y0</code>,<code>x1</code>,<code>y1</code></p>
 
-          <p> You must specify the <code>resource</code> (dataset) and supply a bounding box.
+          <p> You must specify the <code>resource</code> (dataset name), <code>datatype</code> (<code>geojson</code> or <code>feed</code>, depending on the dataset) and supply a bounding box.
            The bounding box pair, <code>x</code> and <code>y</code>, represent the lower left and upper right points of the bounding box, respectively.</p>
-          <p> You&rsquo;ll need to request the data using library that supports <a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a>,
+          <p> You&rsquo;ll need to request the data using a library that supports <a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSON</a>,
            such as <a href="http://api.jquery.com/jQuery.getJSON/">jQuery</a>.</p>
+           
+          <p>The real time feeds available through PDX API are published in the <a href="http://activitystrea.ms">ActivityStreams</a> JSON format.</p>
 
            </div>
            <p>PDXAPI is powered by <a href="http://www.github.com/vmx/couchdb">GeoCouch</a>, a spatial index enabled flavor of CouchDB. This means that every piece of data in PDXAPI is accessible and editable through a REST-like interface.</p> 
-           <p>I am in the process of creating example client applications that take advantage of the full capabilities of the platform; the eye candy at the top of this page is just a teaser.</p>
            <p> Want to help out? Fork the project on <a href="http://github.com/maxogden/pdxapi">Github</a>
             or <a href="http://www.maxogden.com">contact me</a> if you are interested.</p>
 
@@ -84,8 +80,14 @@
   				<p><a href='http://www.pdxapi.com/preview.html'>Launch the dataset previewer</a></p>
           <p> Datasets currently available through PDX API:</p>
           <p> 
+            <h3>realtime feed datasets</h3>
             <pre>
-
+              pdx911
+              city-council-agenda
+              liquor-license-applications
+            </pre>
+            <h3>geojson datasets</h3>
+            <pre>
               bicycle_network
               bicycle_parking
               bridges

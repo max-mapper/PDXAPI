@@ -42,6 +42,10 @@
     "from": ":db/geojson"
   },
   {
+    "to": "../../../:db/_design/push/_list/feed/recent",
+    "from": ":db/feed"
+  },
+  {
     "to": "../../../:db/:id",
     "from": ":db/:id"
   },
