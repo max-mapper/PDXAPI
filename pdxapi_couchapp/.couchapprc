@@ -1,1 +1,0 @@
-{ "env": { "default": { "db": "http://max:yerevan@maxogden.couchone.com/pdxapi" } } }
