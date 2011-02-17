@@ -26,6 +26,10 @@
     "from": "script/*"
   },
   {
+    "to": "pages/*",
+    "from": "pages/*"
+  },
+  {
     "to": "images/*",
     "from": "images/*"
   },
@@ -38,28 +42,24 @@
     "from": ""
   },
   {
-    "to": "pages/911feedexample.html",
-    "from": "911feedexample"
-  },
-  {
-    "to": "../../../:db/_design/geojson/_spatial/points",
-    "from": ":db/geojson"
-  },
-  {
-    "to": "../../../:db/_design/push/_list/feed/recent",
-    "from": ":db/feed"
+    "to": "pages/preview.html",
+    "from": "preview"
   },
   {
     "to": "../../../:db/:id",
     "from": ":db/:id"
   },
   {
-    "to": "pages/preview.html",
-    "from": "preview"
+    "to": "../../../:db/_design/geojson/_spatial/points",
+    "from": ":db/geojson"
   },
   {
-    "to": "pages/preview.html",
-    "from": "preview.html"
+    "to": "../../../:db/_design/geo/_spatiallist/geojson/points",
+    "from": "/v1/:db"
+  },
+  {
+    "to": "../../../:db/_design/push/_list/feed/recent",
+    "from": ":db/feed"
   },
   {
     "to": "../../",
