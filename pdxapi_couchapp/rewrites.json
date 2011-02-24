@@ -46,16 +46,16 @@
     "from": "preview"
   },
   {
+    "to": "../../../:db/_design/geo/_spatiallist/geojson/points",
+    "from": "/v1/:db"
+  },
+  {
     "to": "../../../:db/:id",
     "from": ":db/:id"
   },
   {
     "to": "../../../:db/_design/geojson/_spatial/points",
     "from": ":db/geojson"
-  },
-  {
-    "to": "../../../:db/_design/geo/_spatiallist/geojson/points",
-    "from": "/v1/:db"
   },
   {
     "to": "../../../:db/_design/push/_list/feed/recent",
