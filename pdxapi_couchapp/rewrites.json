@@ -43,15 +43,11 @@
   },
   {
     "to": "pages/preview.html",
-    "from": "preview"
+    "from": "/preview"
   },
   {
     "to": "../../../:db/_design/geo/_spatiallist/geojson/points",
     "from": "/v1/:db"
-  },
-  {
-    "to": "../../../:db/:id",
-    "from": ":db/:id"
   },
   {
     "to": "../../../:db/_design/geojson/_spatial/points",
@@ -60,6 +56,10 @@
   {
     "to": "../../../:db/_design/push/_list/feed/recent",
     "from": ":db/feed"
+  },
+  {
+    "to": "../../../:db/:id",
+    "from": ":db/:id"
   },
   {
     "to": "../../",
